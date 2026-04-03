@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanatan Kriya</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bhagwa: "#d97706",
+            deepBhagwa: "#b45309",
+            kesar: "#f59e0b",
+            softKesar: "#fde68a",
+            temple: "#fff7ed",
+            darkBrown: "#4a2c13",
+            goldLight: "#fffbeb"
+          },
+          fontFamily: {
+            heading: ["Georgia", "serif"],
+            body: ["Poppins", "sans-serif"]
+          },
+          boxShadow: {
+            spiritual: "0 10px 40px rgba(180, 83, 9, 0.18)",
+            glow: "0 0 30px rgba(245, 158, 11, 0.22)"
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-body text-darkBrown overflow-x-hidden bg-[linear-gradient(180deg,#fffaf0_0%,#fff4d8_25%,#fff1dc_55%,#fff8ef_100%)]">
+
+<!-- SINGLE PNG MANDALA BACKGROUND -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+  <img
+    id="mainMandala"
+    src="assets/images/bg.jpg"
+    alt="Mandala Background"
+    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[780px] md:w-[980px] lg:w-[1150px] max-w-none opacity-[0.08] md:opacity-[0.1] select-none"
+  />
+</div>
+
+<div class="relative z-10">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 border-b border-orange-200/70 bg-white/80 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="h-20 flex items-center justify-between">
+
+          <!-- LOGO -->
+          <a href="#home" class="flex items-center gap-3">
+            <img
+              src="assets/images/SK logo.png"
+              alt="Sanatan Kriya Logo"
+              class="h-14 md:h-16 w-auto object-contain"
+            />
+          </a>
+
+          <!-- DESKTOP NAV -->
+          <nav class="hidden md:flex items-center gap-8 font-medium">
+            <a href="index.html" class="hover:text-bhagwa transition">Home</a>
+
+  <a href="calendar.html" class="hover:text-bhagwa transition">Calendar</a>
+
+  <a href="videos.html" class="hover:text-bhagwa transition">Dev Katha</a>
+
+  <a href="gallery.html" class="hover:text-bhagwa transition">HD Gallery</a>
+
+  <a href="aarti.html" class="hover:text-bhagwa transition">Aarti</a>
+
+
+            <div class="relative group">
+              <button class="flex items-center gap-2 hover:text-bhagwa transition">
+                Services
+                <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+
+    <div class="absolute left-0 top-full mt-3 w-64 rounded-2xl bg-white shadow-2xl border border-orange-100 p-3 opacity-0 invisible translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+      <a href="index.html#services" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Bhajan</a>
+      <a href="index.html#services" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Mata Ki Chauki</a>
+      <a href="index.html#services" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Jagran</a>
+      <a href="index.html#services" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Sundar Kand</a>
+      <a href="index.html#services" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Katha</a>
+      <a href="index.html#services" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Ramayan</a>
+    </div>
+            </div>
+          </nav>
+
+<a href="index.html#contact" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium shadow-spiritual hover:scale-105 transition">
+  Book Now
+</a>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="md:hidden hidden pb-5">
+  <div class="rounded-2xl border border-orange-100 bg-white/95 p-4 space-y-3 shadow-lg">
+
+    <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Home</a>
+
+    <a href="calendar.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Calendar</a>
+
+    <a href="videos.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Dev Katha</a>
+
+    <a href="gallery.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">HD Gallery</a>
+
+    <a href="aarti.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Aarti</a>
+
+    <a href="index.html#services" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Bhajan</a>
+    <a href="index.html#services" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Mata Ki Chauki</a>
+    <a href="index.html#services" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Jagran</a>
+    <a href="index.html#services" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Sundar Kand</a>
+    <a href="index.html#services" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Katha</a>
+    <a href="index.html#services" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Ramayan</a>
+
+    <a href="index.html#contact" class="block text-center px-4 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium">
+      Book Now
+    </a>
+
+  </div>
+</div>
+      </div>
+    </header>
+
+<!-- HERO -->
+<section id="home" class="relative min-h-[94vh] flex items-center overflow-hidden">
+  <div class="absolute inset-0">
+    <img
+      src="assets/images/hero-devine.jpg"
+      alt="Sanatan Kriya Hero"
+      class="w-full h-full object-cover scale-105"
+    />
+    <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.30),rgba(0,0,0,0.55))]"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10 w-full py-20">
+    <div class="max-w-3xl reveal opacity-0 translate-y-10 transition-all duration-1000 text-white">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-5">
+        <span class="w-2.5 h-2.5 rounded-full bg-yellow-300 animate-pulse"></span>
+        <span class="text-sm tracking-wide">Sacred Spiritual Gatherings</span>
+      </div>
+
+      <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight font-heading">
+        Divine Experiences
+        <span class="text-yellow-300 block">Rooted in Bhakti</span>
+      </h2>
+
+      <p class="mt-6 text-base md:text-lg text-orange-50 max-w-2xl leading-8">
+        Sanatan Kriya brings devotional events, sacred recitations, spiritual music,
+        and traditional gatherings together in one divine platform. From Bhajan Sandhya
+        to Jagran, Mata Ki Chauki, Sundar Kand, Katha, and Ramayan Paath, every service
+        is arranged to create a spiritually uplifting and grace-filled atmosphere.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#services" class="px-7 py-3.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-darkBrown font-semibold shadow-glow hover:scale-105 transition">
+          Explore Services
+        </a>
+        <a href="#contact" class="px-7 py-3.5 rounded-full border border-white/40 text-white font-medium hover:bg-white/10 transition">
+          Enquire Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- INTRO -->
+    <section class="py-20 relative">
+      <div class="max-w-5xl mx-auto px-6 lg:px-10 text-center reveal opacity-0 translate-y-10 transition-all duration-1000">
+        <p class="text-bhagwa font-semibold tracking-[0.25em] uppercase text-sm">About Sanatan Kriya</p>
+        <h2 class="mt-4 text-3xl md:text-5xl font-bold text-deepBhagwa font-heading">
+          A Sacred Journey Through Sound, Story & Devotion
+        </h2>
+        <p class="mt-6 text-base md:text-lg leading-8 text-darkBrown/80">
+          Every spiritual gathering is more than just an event — it is an experience of faith, emotion, energy,
+          and collective devotion. Through bhajans, jagrans, kathas, Sundar Kand, Ramayan paath, and Mata Ki Chauki,
+          Sanatan Kriya creates an atmosphere filled with grace, bhakti, and divine vibrations.
+        </p>
+      </div>
+    </section>
+
+ <!-- SERVICES ALT SECTIONS -->
+<section id="services" class="py-12">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 space-y-24">
+
+    <!-- 1 -->
+    <div class="grid lg:grid-cols-2 gap-10 items-center reveal opacity-0 translate-y-10 transition-all duration-1000">
+      <div class="rounded-[2rem] overflow-hidden shadow-spiritual bg-white border border-orange-100 h-[320px] md:h-[380px]">
+        <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+          <source src="assets/images/bhajan.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <p class="text-bhagwa font-semibold uppercase tracking-[0.25em] text-sm">Service 01</p>
+        <h3 class="mt-3 text-3xl md:text-4xl font-bold text-deepBhagwa font-heading">Bhajan Sandhya / Bhajan Clubbing</h3>
+        <p class="mt-5 text-darkBrown/80 leading-8">
+          A soulful devotional gathering filled with bhajans, sacred musical energy, and collective devotion.
+          This service creates an atmosphere of peace, positivity, joy, and spiritual connection for families,
+          communities, and special occasions.
+        </p>
+        <a href="#contact" class="inline-block mt-6 px-6 py-3 rounded-full bg-orange-500 text-white font-medium hover:scale-105 transition">
+          Book This Service
+        </a>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="grid lg:grid-cols-2 gap-10 items-center reveal opacity-0 translate-y-10 transition-all duration-1000">
+      <div class="order-2 lg:order-1">
+        <p class="text-bhagwa font-semibold uppercase tracking-[0.25em] text-sm">Service 02</p>
+        <h3 class="mt-3 text-3xl md:text-4xl font-bold text-deepBhagwa font-heading">Mata Ki Chauki</h3>
+        <p class="mt-5 text-darkBrown/80 leading-8">
+          Mata Ki Chauki is a sacred devotional gathering dedicated to Maa, filled with bhakti,
+          reverence, spiritual music, and divine presence. It is ideal for homes, celebrations,
+          blessings, and occasions where grace and devotion are at the center.
+        </p>
+        <a href="#contact" class="inline-block mt-6 px-6 py-3 rounded-full bg-orange-500 text-white font-medium hover:scale-105 transition">
+          Book This Service
+        </a>
+      </div>
+      <div class="order-1 lg:order-2 rounded-[2rem] overflow-hidden shadow-spiritual bg-white border border-orange-100 h-[320px] md:h-[380px]">
+        <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+          <source src="assets/images/Mata ki chauki.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="grid lg:grid-cols-2 gap-10 items-center reveal opacity-0 translate-y-10 transition-all duration-1000">
+      <div class="rounded-[2rem] overflow-hidden shadow-spiritual bg-white border border-orange-100 h-[320px] md:h-[380px]">
+        <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+          <source src="assets/images/Jagran.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <p class="text-bhagwa font-semibold uppercase tracking-[0.25em] text-sm">Service 03</p>
+        <h3 class="mt-3 text-3xl md:text-4xl font-bold text-deepBhagwa font-heading">Jagran</h3>
+        <p class="mt-5 text-darkBrown/80 leading-8">
+          Jagran is a powerful all-night devotional experience where sacred singing, divine remembrance,
+          and collective worship create a spiritually charged atmosphere. It is arranged with deep devotion,
+          energy, and reverence for meaningful sacred events.
+        </p>
+        <a href="#contact" class="inline-block mt-6 px-6 py-3 rounded-full bg-orange-500 text-white font-medium hover:scale-105 transition">
+          Book This Service
+        </a>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="grid lg:grid-cols-2 gap-10 items-center reveal opacity-0 translate-y-10 transition-all duration-1000">
+      <div class="order-2 lg:order-1">
+        <p class="text-bhagwa font-semibold uppercase tracking-[0.25em] text-sm">Service 04</p>
+        <h3 class="mt-3 text-3xl md:text-4xl font-bold text-deepBhagwa font-heading">Sundar Kand Paath</h3>
+        <p class="mt-5 text-darkBrown/80 leading-8">
+          Sundar Kand Paath brings courage, protection, devotion, and divine blessings into the environment.
+          This sacred recitation is performed to create peace, spiritual strength, and a deeply uplifting
+          atmosphere for devotees and families.
+        </p>
+        <a href="#contact" class="inline-block mt-6 px-6 py-3 rounded-full bg-orange-500 text-white font-medium hover:scale-105 transition">
+          Book This Service
+        </a>
+      </div>
+      <div class="order-1 lg:order-2 rounded-[2rem] overflow-hidden shadow-spiritual bg-white border border-orange-100 h-[320px] md:h-[380px]">
+        <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+          <source src="assets/images/sundar kand.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="grid lg:grid-cols-2 gap-10 items-center reveal opacity-0 translate-y-10 transition-all duration-1000">
+      <div class="rounded-[2rem] overflow-hidden shadow-spiritual bg-white border border-orange-100 h-[320px] md:h-[380px]">
+        <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+          <source src="assets/images/katha.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <p class="text-bhagwa font-semibold uppercase tracking-[0.25em] text-sm">Service 05</p>
+        <h3 class="mt-3 text-3xl md:text-4xl font-bold text-deepBhagwa font-heading">Katha</h3>
+        <p class="mt-5 text-darkBrown/80 leading-8">
+          Spiritual Katha sessions bring divine stories, dharmic teachings, and devotional wisdom to life.
+          These gatherings are arranged to inspire faith, understanding, and emotional connection through
+          sacred narration and spiritual reflection.
+        </p>
+        <a href="#contact" class="inline-block mt-6 px-6 py-3 rounded-full bg-orange-500 text-white font-medium hover:scale-105 transition">
+          Book This Service
+        </a>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="grid lg:grid-cols-2 gap-10 items-center reveal opacity-0 translate-y-10 transition-all duration-1000">
+      <div class="order-2 lg:order-1">
+        <p class="text-bhagwa font-semibold uppercase tracking-[0.25em] text-sm">Service 06</p>
+        <h3 class="mt-3 text-3xl md:text-4xl font-bold text-deepBhagwa font-heading">Ramayan Paath</h3>
+        <p class="mt-5 text-darkBrown/80 leading-8">
+          Ramayan Paath creates a pure, disciplined, and spiritually elevating environment where the values,
+          grace, and divine essence of Shri Ram are brought into the hearts of devotees through sacred recitation.
+        </p>
+        <a href="#contact" class="inline-block mt-6 px-6 py-3 rounded-full bg-orange-500 text-white font-medium hover:scale-105 transition">
+          Book This Service
+        </a>
+      </div>
+      <div class="order-1 lg:order-2 rounded-[2rem] overflow-hidden shadow-spiritual bg-white border border-orange-100 h-[320px] md:h-[380px]">
+        <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+          <source src="assets/images/ramayan path.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- CTA FORM -->
+    <section id="contact" class="py-20">
+      <div class="max-w-4xl mx-auto px-6 lg:px-10">
+        <div class="rounded-[2.2rem] bg-white/80 backdrop-blur-xl border border-orange-200 shadow-spiritual p-6 md:p-10 reveal opacity-0 translate-y-10 transition-all duration-1000">
+          <div class="text-center">
+            <p class="text-bhagwa font-semibold tracking-[0.25em] uppercase text-sm">Get in Touch</p>
+            <h2 class="mt-4 text-3xl md:text-5xl font-bold text-deepBhagwa font-heading">Book Your Spiritual Service</h2>
+            <p class="mt-4 text-darkBrown/75 leading-8 max-w-2xl mx-auto">
+              Fill the form below and let us know your service requirement. We will connect with you for your divine event.
+            </p>
+          </div>
+
+          <form class="mt-10 grid md:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-medium mb-2 text-deepBhagwa">Full Name</label>
+              <input type="text" placeholder="Enter your name" class="w-full rounded-2xl border border-orange-200 bg-white px-5 py-4 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2 text-deepBhagwa">Phone Number</label>
+              <input type="tel" placeholder="Enter your number" class="w-full rounded-2xl border border-orange-200 bg-white px-5 py-4 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition" />
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2 text-deepBhagwa">Select Service</label>
+              <select class="w-full rounded-2xl border border-orange-200 bg-white px-5 py-4 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition">
+                <option>Choose a service</option>
+                <option>Bhajan</option>
+                <option>Blubbing</option>
+                <option>Mata Ki Chauki</option>
+                <option>Jagran</option>
+                <option>Sundar Kand</option>
+                <option>Katha</option>
+                <option>Ramayan</option>
+              </select>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2 text-deepBhagwa">Your Query</label>
+              <textarea rows="6" maxlength="250" placeholder="Write your query here (max 250 words)" class="w-full rounded-2xl border border-orange-200 bg-white px-5 py-4 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition resize-none"></textarea>
+            </div>
+
+            <div class="md:col-span-2 text-center pt-2">
+              <button type="submit" class="px-10 py-4 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 text-white font-semibold shadow-spiritual hover:scale-105 transition">
+                Submit Enquiry
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative pt-16 pb-8 border-t border-orange-200 bg-gradient-to-b from-orange-50/50 to-yellow-50/40">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="grid md:grid-cols-3 gap-10 items-start">
+          <div>
+            <div class="flex items-center gap-3">
+              <img
+                src="assets/images/SK logo.png"
+                alt="Sanatan Kriya Logo"
+                class="h-16 w-auto object-contain"
+              />
+              <div>
+                <!-- <h3 class="text-2xl font-bold text-deepBhagwa">Sanatan Kriya</h3>
+                <p class="text-sm text-orange-700">Sacred Spiritual Services</p> -->
+              </div>
+            </div>
+            <p class="mt-5 text-darkBrown/75 leading-7 max-w-sm">
+              Creating spiritually rich experiences through devotion, sacred music, divine storytelling, and traditional gatherings.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-semibold text-deepBhagwa">Quick Links</h4>
+            <div class="mt-5 space-y-3 text-darkBrown/80">
+              <a href="#home" class="block hover:text-bhagwa transition">Home</a>
+              <a href="#services" class="block hover:text-bhagwa transition">Services</a>
+              <a href="#contact" class="block hover:text-bhagwa transition">Contact</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-semibold text-deepBhagwa">Connect With Us</h4>
+            <div class="mt-5 flex items-center gap-4 text-xl">
+              <a href="#" class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition">f</a>
+              <a href="#" class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition">in</a>
+              <a href="#" class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition">▶</a>
+              <a href="#" class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition">◎</a>
+            </div>
+            <p class="mt-6 text-darkBrown/80">
+              WhatsApp:
+              <a href="https://wa.me/919911826993" class="text-bhagwa font-semibold hover:underline">
+                +91 99118 26993
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 pt-6 border-t border-orange-200 text-center text-sm text-darkBrown/65">
+          © 2026 Sanatan Kriya. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+
+<!-- WHATSAPP FLOAT (PERFECT CENTERED) -->
+<a
+  href="https://wa.me/919911826993"
+  target="_blank"
+  class="fixed top-1/2 right-2 -translate-y-1/2 z-50"
+>
+  <div class="w-16 h-16 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_0_22px_rgba(37,211,102,0.45)]">
+    
+    <!-- FIXED SVG -->
+    <svg viewBox="0 0 32 32" class="w-7 h-7 fill-white translate-x-[0.5px] translate-y-[0.5px]">
+      <path d="M16.01 3.2c-7.05 0-12.76 5.7-12.76 12.74 0 2.25.59 4.46 1.72 6.42L3 29l6.75-1.77a12.73 12.73 0 0 0 6.26 1.6h.01c7.05 0 12.76-5.7 12.76-12.74S23.07 3.2 16.01 3.2zm0 23.2h-.01a10.46 10.46 0 0 1-5.34-1.47l-.38-.22-4 1.05 1.07-3.9-.25-.4a10.44 10.44 0 0 1-1.6-5.57c0-5.8 4.72-10.52 10.53-10.52 2.81 0 5.44 1.1 7.42 3.08a10.45 10.45 0 0 1 3.08 7.43c0 5.8-4.73 10.52-10.53 10.52zm5.77-7.87c-.31-.15-1.83-.9-2.12-1-.29-.11-.5-.15-.71.15-.21.3-.81 1-.99 1.2-.18.21-.36.23-.67.08-.31-.15-1.3-.48-2.48-1.53-.91-.81-1.52-1.8-1.7-2.11-.18-.31-.02-.47.14-.62.14-.14.31-.36.47-.54.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.54-.08-.15-.71-1.7-.97-2.33-.25-.61-.5-.53-.69-.54h-.6c-.21 0-.54.08-.82.39-.28.31-1.08 1.06-1.08 2.58s1.11 3 1.27 3.21c.16.21 2.19 3.35 5.3 4.69.74.32 1.32.51 1.78.65.75.24 1.43.21 1.97.13.6-.09 1.83-.75 2.09-1.47.26-.72.26-1.34.18-1.47-.08-.13-.29-.21-.6-.36z"/>
+    </svg>
+
+  </div>
+</a>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

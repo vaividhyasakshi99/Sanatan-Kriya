@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aarti | Sanatan Kriya</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bhagwa: "#d97706",
+            deepBhagwa: "#b45309",
+            kesar: "#f59e0b",
+            temple: "#fff7ed",
+            darkBrown: "#4a2c13",
+            goldLight: "#fffbeb"
+          },
+          fontFamily: {
+            heading: ["Georgia", "serif"],
+            body: ["Poppins", "sans-serif"]
+          },
+          boxShadow: {
+            spiritual: "0 10px 40px rgba(180, 83, 9, 0.18)",
+            glow: "0 0 30px rgba(245, 158, 11, 0.22)"
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .hero-zoom {
+      animation: heroZoom 16s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroZoom {
+      from {
+        transform: scale(1.03);
+      }
+      to {
+        transform: scale(1.12);
+      }
+    }
+
+    .soft-glass {
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .aarti-list-card {
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .aarti-list-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 45px rgba(180, 83, 9, 0.16);
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(to right, #d97706 0%, #f59e0b 100%);
+      outline: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: white;
+      border: 3px solid #b45309;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: white;
+      border: 3px solid #b45309;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+    }
+
+.line-clamp-custom {
+  overflow: hidden;
+  line-height: 1.75rem;
+  max-height: 3.5rem;
+}
+  </style>
+</head>
+
+<body class="font-body text-darkBrown overflow-x-hidden bg-[linear-gradient(180deg,#fffaf0_0%,#fff4d8_25%,#fff1dc_55%,#fff8ef_100%)]">
+
+  <!-- MANDALA BG -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <img
+      id="mainMandala"
+      src="assets/images/bg.jpg"
+      alt=""
+      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[780px] md:w-[980px] lg:w-[1150px] max-w-none opacity-[0.08] md:opacity-[0.1] select-none"
+    />
+  </div>
+
+  <div class="relative z-10">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 border-b border-orange-200/70 bg-white/80 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="h-20 flex items-center justify-between gap-4">
+
+          <a href="index.html" class="flex items-center gap-3 min-w-fit">
+            <img
+              src="assets/images/SK logo.png"
+              alt="Sanatan Kriya Logo"
+              class="h-14 md:h-16 w-auto object-contain"
+            />
+          </a>
+
+          <nav class="hidden md:flex items-center gap-8 font-medium">
+            <a href="index.html" class="hover:text-bhagwa transition">Home</a>
+            <a href="calendar.html" class="hover:text-bhagwa transition">Calendar</a>
+            <a href="videos.html" class="hover:text-bhagwa transition">Dev Katha</a>
+            <a href="gallery.html" class="hover:text-bhagwa transition">HD Gallery</a>
+            <a href="aarti.html" class="text-bhagwa font-semibold">Aarti</a>
+          </nav>
+
+          <div class="flex items-center gap-3">
+            <a href="index.html#contact" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium shadow-spiritual hover:scale-105 transition">
+              Book Now
+            </a>
+
+            <button
+              id="mobileMenuBtn"
+              class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border border-orange-200 bg-white text-deepBhagwa"
+              aria-label="Open Menu"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu" class="md:hidden hidden pb-5">
+          <div class="rounded-2xl border border-orange-100 bg-white/95 p-4 space-y-3 shadow-lg">
+            <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Home</a>
+            <a href="calendar.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Calendar</a>
+            <a href="videos.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Video Links</a>
+            <a href="gallery.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">HD Gallery</a>
+            <a href="stories.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">God Stories</a>
+            <a href="aarti.html" class="block px-3 py-2 rounded-xl bg-orange-50 text-bhagwa font-semibold">Aarti</a>
+            <a href="index.html#contact" class="block text-center px-4 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium">
+              Book Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative min-h-[82vh] flex items-center overflow-hidden">
+      <div class="absolute inset-0">
+        <img
+          src="assets/images/aarti-hero.jpg"
+          alt=""
+          class="w-full h-full object-cover hero-zoom"
+        />
+        <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.28),rgba(0,0,0,0.62))]"></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-6 lg:px-10 w-full py-20">
+        <div class="max-w-3xl reveal opacity-0 translate-y-10 transition-all duration-1000 text-white">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-5 soft-glass">
+            <span class="w-2.5 h-2.5 rounded-full bg-yellow-300 animate-pulse"></span>
+            <span class="text-sm tracking-wide">Sacred Aarti Collection</span>
+          </div>
+
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight font-heading">
+            Divine Aarti
+            <span class="text-yellow-300 block">Read, Listen & Feel the Bhakti</span>
+          </h1>
+
+          <p class="mt-6 text-base md:text-lg text-orange-50 max-w-2xl leading-8">
+            Discover devotional Aartis in Hindi with meaningful presentation and smooth audio controls.
+            Read the verses, switch between stanzas, and listen with a peaceful spiritual experience.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#aartiMainSection" class="px-7 py-3.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-darkBrown font-semibold shadow-glow hover:scale-105 transition">
+              Explore Aarti
+            </a>
+            <a href="#aartiControls" class="px-7 py-3.5 rounded-full border border-white/40 text-white font-medium hover:bg-white/10 transition">
+              Search Aarti
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="py-20 relative">
+      <div class="max-w-5xl mx-auto px-6 lg:px-10 text-center reveal opacity-0 translate-y-10 transition-all duration-1000">
+        <p class="text-bhagwa font-semibold tracking-[0.25em] uppercase text-sm">Divine Collection</p>
+        <h2 class="mt-4 text-3xl md:text-5xl font-bold text-deepBhagwa font-heading">
+          A Sacred Space For Aarti & Devotion
+        </h2>
+        <p class="mt-6 text-base md:text-lg leading-8 text-darkBrown/80">
+          Immerse yourself in the divine rhythm of devotional Aartis. Read each verse with clarity,
+          listen with devotion, and experience a calm spiritual atmosphere designed for peace and prayer.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTROLS -->
+    <section id="aartiControls" class="pb-8">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="rounded-[2rem] bg-white/80 backdrop-blur-xl border border-orange-200 shadow-spiritual p-5 md:p-6 reveal opacity-0 translate-y-10 transition-all duration-1000">
+          <div class="flex flex-col lg:flex-row gap-4 lg:items-center lg:justify-between">
+            <div>
+              <p class="text-bhagwa font-semibold tracking-[0.25em] uppercase text-sm">Browse Aarti</p>
+              <h3 class="mt-2 text-2xl md:text-3xl font-bold text-deepBhagwa font-heading">
+                Search & Filter By Occasion
+              </h3>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+              <input
+                id="aartiSearch"
+                type="text"
+                placeholder="Search Aarti... like Ganesh, Durga, Ram"
+                class="w-full sm:w-[320px] rounded-2xl border border-orange-200 bg-white px-5 py-3.5 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition"
+              />
+
+              <select
+                id="aartiCategory"
+                class="w-full sm:w-[240px] rounded-2xl border border-orange-200 bg-white px-5 py-3.5 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition"
+              >
+                <option value="all">All Categories</option>
+                <option value="daily">Daily</option>
+                <option value="ganesh">Ganesh Chaturthi</option>
+                <option value="navratri">Navratri</option>
+                <option value="ramnavami">Ram Navami</option>
+                <option value="hanumanjayanti">Hanuman Jayanti</option>
+                <option value="krishnajanmashtami">Janmashtami</option>
+                <option value="shivratri">Mahashivratri</option>
+                <option value="diwali">Diwali</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED AARTI -->
+    <section id="aartiMainSection" class="pb-12">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="rounded-[2rem] bg-white/85 backdrop-blur-xl border border-orange-200 shadow-spiritual overflow-hidden reveal opacity-0 translate-y-10 transition-all duration-1000">
+          <div class="grid lg:grid-cols-[380px_1fr] gap-0">
+
+            <!-- LEFT IMAGE -->
+            <div class="relative min-h-[360px] lg:min-h-[100%] bg-gradient-to-br from-orange-100 to-yellow-50">
+              <img
+                id="featuredAartiImage"
+                src="assets/aarti/ganesh.jpg"
+                alt=""
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="p-6 md:p-8 lg:p-10">
+              <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-5">
+                <div>
+                  <p id="featuredAartiCategory" class="text-bhagwa font-semibold tracking-[0.22em] uppercase text-sm">
+                    Ganesh Chaturthi
+                  </p>
+                  <h2 id="featuredAartiTitle" class="mt-3 text-3xl md:text-4xl font-bold text-deepBhagwa font-heading">
+                    जय गणेश देवा
+                  </h2>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <button
+                    id="prevParagraphBtn"
+                    class="w-12 h-12 rounded-full border border-orange-200 bg-orange-50 text-deepBhagwa hover:bg-orange-100 transition flex items-center justify-center"
+                    aria-label="Previous Paragraph"
+                  >
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                  </button>
+
+                  <button
+                    id="nextParagraphBtn"
+                    class="w-12 h-12 rounded-full border border-orange-200 bg-orange-50 text-deepBhagwa hover:bg-orange-100 transition flex items-center justify-center"
+                    aria-label="Next Paragraph"
+                  >
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="mt-8 rounded-[1.5rem] bg-orange-50/70 border border-orange-100 p-6 md:p-8 min-h-[220px] flex flex-col justify-between">
+                <p class="text-sm uppercase tracking-[0.22em] text-bhagwa font-semibold">
+                  Verse <span id="paragraphIndexDisplay">1</span>
+                  /
+                  <span id="paragraphTotalDisplay">1</span>
+                </p>
+
+                <p
+                  id="featuredAartiText"
+                  class="mt-5 text-lg md:text-[1.34rem] leading-[2.2] md:leading-[2.4] text-darkBrown font-medium whitespace-pre-line"
+                >
+                  जय गणेश, जय गणेश, जय गणेश देवा।
+                  माता जाकी पार्वती, पिता महादेवा॥
+                </p>
+              </div>
+
+              <!-- AUDIO -->
+              <div class="mt-8 rounded-[1.5rem] border border-orange-100 bg-white p-5 md:p-6">
+                <audio id="featuredAudio" preload="metadata"></audio>
+
+                <div class="flex flex-col gap-4">
+                  <input
+                    id="audioSeek"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="0"
+                    class="w-full"
+                  />
+
+                  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                    <div class="flex items-center gap-3 flex-wrap">
+                      <button
+                        id="playPauseBtn"
+                        class="px-5 py-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 text-white font-semibold hover:scale-105 transition"
+                      >
+                        Play
+                      </button>
+
+                      <button
+                        id="backwardBtn"
+                        class="px-4 py-3 rounded-full border border-orange-200 bg-orange-50 text-deepBhagwa font-semibold hover:bg-orange-100 transition"
+                      >
+                        -10s
+                      </button>
+
+                      <button
+                        id="forwardBtn"
+                        class="px-4 py-3 rounded-full border border-orange-200 bg-orange-50 text-deepBhagwa font-semibold hover:bg-orange-100 transition"
+                      >
+                        +10s
+                      </button>
+                    </div>
+
+                    <div class="flex items-center gap-3 text-sm md:text-base font-medium text-darkBrown/80">
+                      <span id="currentTime">00:00</span>
+                      <span>/</span>
+                      <span id="duration">00:00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AARTI LIST -->
+    <section class="pb-20">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="mb-8 text-center reveal opacity-0 translate-y-10 transition-all duration-1000">
+          <p class="text-bhagwa font-semibold tracking-[0.25em] uppercase text-sm">Featured List</p>
+          <h3 class="mt-3 text-3xl md:text-4xl font-bold text-deepBhagwa font-heading">
+            More Aartis To Explore
+          </h3>
+        </div>
+
+        <div id="aartiCardsGrid" class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+
+        <div id="aartiEmptyState" class="hidden mt-10">
+          <div class="rounded-[2rem] border border-orange-200 bg-white/80 p-10 text-center shadow-spiritual">
+            <h3 class="text-2xl font-bold text-deepBhagwa font-heading">No Aarti found</h3>
+            <p class="mt-3 text-darkBrown/75">
+              Try changing the search text or category.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative pt-16 pb-8 border-t border-orange-200 bg-gradient-to-b from-orange-50/50 to-yellow-50/40">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="grid md:grid-cols-3 gap-10 items-start">
+          <div>
+            <div class="flex items-center gap-3">
+              <img
+                src="assets/images/SK logo.png"
+                alt="Sanatan Kriya Logo"
+                class="h-16 w-auto object-contain"
+              />
+            </div>
+            <p class="mt-5 text-darkBrown/75 leading-7 max-w-sm">
+              Creating spiritually rich experiences through devotion, sacred music, divine storytelling, and traditional gatherings.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-semibold text-deepBhagwa">Quick Links</h4>
+            <div class="mt-5 space-y-3 text-darkBrown/80">
+              <a href="index.html" class="block hover:text-bhagwa transition">Home</a>
+              <a href="gallery.html" class="block hover:text-bhagwa transition">HD Gallery</a>
+              <a href="aarti.html" class="block hover:text-bhagwa transition">Aarti</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-semibold text-deepBhagwa">Connect With Us</h4>
+            <div class="mt-5 flex items-center gap-4 text-xl">
+              <a href="#" class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition">f</a>
+              <a href="#" class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition">in</a>
+              <a href="#" class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition">▶</a>
+              <a href="#" class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition">◎</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 pt-6 border-t border-orange-200 text-center text-sm text-darkBrown/65">
+          © 2026 Sanatan Kriya. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/aarti.js"></script>
+</body>
+</html>
