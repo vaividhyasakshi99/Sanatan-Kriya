@@ -41,47 +41,9 @@
       scroll-behavior: smooth;
     }
 
-    .gallery-masonry {
-      column-gap: 1.25rem;
-    }
-
-    @media (min-width: 320px) {
-      .gallery-masonry {
-        column-count: 1;
-      }
-    }
-
-    @media (min-width: 640px) {
-      .gallery-masonry {
-        column-count: 2;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .gallery-masonry {
-        column-count: 3;
-      }
-    }
-
-    @media (min-width: 1280px) {
-      .gallery-masonry {
-        column-count: 4;
-      }
-    }
-
-    .gallery-item {
-      break-inside: avoid;
-      margin-bottom: 1.25rem;
-    }
-
-    .gallery-card {
-      transform: translateY(0);
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-
-    .gallery-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 18px 45px rgba(180, 83, 9, 0.16);
+    .soft-glass {
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
     }
 
     .hero-zoom {
@@ -93,20 +55,76 @@
         transform: scale(1.03);
       }
       to {
-        transform: scale(1.12);
+        transform: scale(1.10);
       }
     }
 
-    .soft-glass {
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+    .gallery-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 640px) {
+      .gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .gallery-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+    }
+
+    .gallery-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(180, 83, 9, 0.15);
     }
   </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4HKMJLZYDR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4HKMJLZYDR');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1602755334357748');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
 </head>
 
 <body class="font-body text-darkBrown overflow-x-hidden bg-[linear-gradient(180deg,#fffaf0_0%,#fff4d8_25%,#fff1dc_55%,#fff8ef_100%)]">
-
-  <!-- SINGLE PNG MANDALA BACKGROUND -->
+<!-- Meta Pixel Code -->
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1602755334357748&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+  <!-- MANDALA BG -->
   <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
     <img
       id="mainMandala"
@@ -119,181 +137,154 @@
   <div class="relative z-10">
 
     <!-- HEADER -->
-    <header class="sticky top-0 z-50 border-b border-orange-200/70 bg-white/80 backdrop-blur-xl">
-      <div class="max-w-7xl mx-auto px-6 lg:px-10">
-        <div class="h-20 flex items-center justify-between gap-4">
+    <!-- HEADER -->
+<header class="sticky top-0 z-50 border-b border-orange-200/70 bg-white/80 backdrop-blur-xl">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
-          <!-- LOGO -->
-          <a href="index.html" class="flex items-center gap-3 min-w-fit">
-            <img
-              src="assets/images/SK logo.png"
-              alt="Sanatan Kriya Logo"
-              class="h-14 md:h-16 w-auto object-contain"
-            />
-          </a>
+    <div class="h-20 flex items-center justify-between gap-4">
+      
+      <!-- LOGO -->
+      <a href="index.html" class="flex items-center gap-3 shrink-0">
+        <img
+          src="assets/images/SK logo.png"
+          alt="Sanatan Kriya Logo"
+          class="h-14 md:h-16 w-auto object-contain"
+        />
+      </a>
 
-          <!-- DESKTOP NAV -->
-          <nav class="hidden md:flex items-center gap-8 font-medium">
-            <a href="index.html" class="hover:text-bhagwa transition">Home</a>
-            <a href="calendar.html" class="hover:text-bhagwa transition">Calendar</a>
-            <a href="videos.html" class="hover:text-bhagwa transition">Dev Katha</a>
-            <a href="gallery.html" class="text-bhagwa font-semibold">HD Gallery</a>
-            <a href="aarti.html" class="hover:text-bhagwa transition">Aarti</a>
+      <!-- DESKTOP NAV -->
+      <nav class="hidden md:flex items-center gap-8 font-medium">
+        <a href="index.html" class="hover:text-bhagwa transition">Home</a>
+        <a href="calendar.html" class="hover:text-bhagwa transition">Calendar</a>
+        <a href="videos.html" class="hover:text-bhagwa transition">Dev Katha</a>
+        <a href="gallery.html" class="text-bhagwa font-semibold">HD Gallery</a>
+        <a href="aarti.html" class="hover:text-bhagwa transition">Aarti</a>
 
-            <div class="relative group">
-              <button class="flex items-center gap-2 hover:text-bhagwa transition">
-                Services
-                <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </button>
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-2 hover:text-bhagwa transition">
+            Services
+            <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
 
-              <div class="absolute left-0 top-full mt-3 w-64 rounded-2xl bg-white shadow-2xl border border-orange-100 p-3 opacity-0 invisible translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
-                <a href="index.html#services" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Bhajan</a>
-                <a href="index.html#services" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Mata Ki Chauki</a>
-                <a href="index.html#services" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Jagran</a>
-                <a href="index.html#services" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Sundar Kand</a>
-                <a href="index.html#services" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Katha</a>
-                <a href="index.html#services" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Ramayan</a>
-              </div>
-            </div>
-          </nav>
-
-          <div class="flex items-center gap-3">
-            <a href="index.html#contact" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium shadow-spiritual hover:scale-105 transition">
-              Book Now
-            </a>
-
-            <!-- MOBILE BUTTON -->
-            <button
-              id="mobileMenuBtn"
-              class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border border-orange-200 bg-white text-deepBhagwa"
-              aria-label="Open Menu"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
-              </svg>
-            </button>
+          <div class="absolute left-0 top-full mt-3 w-64 rounded-2xl bg-white shadow-2xl border border-orange-100 p-3 opacity-0 invisible translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+            <a href="index.html#bhajan" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Bhajan</a>
+            <a href="index.html#chauki" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Mata Ki Chauki</a>
+            <a href="index.html#jagran" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Jagran</a>
+            <a href="index.html#sundar-kand" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Sundar Kand</a>
+            <a href="index.html#katha" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Katha</a>
+            <a href="index.html#ramayan" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Ramayan</a>
           </div>
         </div>
+      </nav>
 
-        <!-- MOBILE MENU -->
-        <div id="mobileMenu" class="md:hidden hidden pb-5">
-          <div class="rounded-2xl border border-orange-100 bg-white/95 p-4 space-y-3 shadow-lg">
-            <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Home</a>
-            <a href="calendar.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Calendar</a>
-            <a href="videos.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Dev Katha</a>
-            <a href="gallery.html" class="block px-3 py-2 rounded-xl bg-orange-50 text-bhagwa font-semibold">HD Gallery</a>
-            <a href="aarti.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Aarti</a>
+      <!-- RIGHT SIDE -->
+      <div class="flex items-center gap-3 shrink-0">
+        <a href="index.html#contact" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium shadow-spiritual hover:scale-105 transition">
+          Book Now
+        </a>
 
-            <a href="index.html#services" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Bhajan</a>
-            <a href="index.html#services" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Mata Ki Chauki</a>
-            <a href="index.html#services" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Jagran</a>
-            <a href="index.html#services" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Sundar Kand</a>
-            <a href="index.html#services" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Katha</a>
-            <a href="index.html#services" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Ramayan</a>
-
-            <a href="index.html#contact" class="block text-center px-4 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium">
-              Book Now
-            </a>
-          </div>
-        </div>
+        <!-- MOBILE MENU BUTTON -->
+        <button id="menuToggle" type="button" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border border-orange-200 bg-white/80">
+          <span class="relative block w-5 h-5">
+            <span class="absolute left-0 top-[3px] w-5 h-0.5 bg-deepBhagwa rounded transition-all duration-300 line1"></span>
+            <span class="absolute left-0 top-[9px] w-5 h-0.5 bg-deepBhagwa rounded transition-all duration-300 line2"></span>
+            <span class="absolute left-0 top-[15px] w-5 h-0.5 bg-deepBhagwa rounded transition-all duration-300 line3"></span>
+          </span>
+        </button>
       </div>
-    </header>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="md:hidden hidden pb-5">
+      <div class="rounded-2xl border border-orange-100 bg-white/95 p-4 space-y-3 shadow-lg">
+        <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Home</a>
+        <a href="calendar.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Calendar</a>
+        <a href="videos.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Dev Katha</a>
+        <a href="gallery.html" class="block px-3 py-2 rounded-xl bg-orange-50 text-bhagwa font-semibold">HD Gallery</a>
+        <a href="aarti.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Aarti</a>
+
+        <a href="index.html#bhajan" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Bhajan</a>
+        <a href="index.html#chauki" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Mata Ki Chauki</a>
+        <a href="index.html#jagran" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Jagran</a>
+        <a href="index.html#sundar-kand" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Sundar Kand</a>
+        <a href="index.html#katha" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Katha</a>
+        <a href="index.html#ramayan" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Ramayan</a>
+
+        <a href="index.html#contact" class="block text-center px-4 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium">
+          Book Now
+        </a>
+      </div>
+    </div>
+
+  </div>
+</header>
 
     <!-- HERO -->
-    <section id="home" class="relative min-h-[82vh] flex items-center overflow-hidden">
+    <section class="relative min-h-[60vh] flex items-center overflow-hidden">
       <div class="absolute inset-0">
         <img
           src="assets/images/hero-devine.jpg"
           alt="HD Gallery Hero"
           class="w-full h-full object-cover hero-zoom"
         />
-        <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.28),rgba(0,0,0,0.62))]"></div>
+        <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.30),rgba(0,0,0,0.65))]"></div>
       </div>
 
       <div class="relative max-w-7xl mx-auto px-6 lg:px-10 w-full py-20">
-        <div class="max-w-3xl reveal opacity-0 translate-y-10 transition-all duration-1000 text-white">
+        <div class="max-w-3xl text-white">
           <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-5 soft-glass">
             <span class="w-2.5 h-2.5 rounded-full bg-yellow-300 animate-pulse"></span>
-            <span class="text-sm tracking-wide">Sacred Wallpapers Collection</span>
+            <span class="text-sm tracking-wide">Divine Wallpapers Collection</span>
           </div>
 
-          <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight font-heading">
-            Divine HD Gallery
-            <span class="text-yellow-300 block">Download Beautiful God Images</span>
+          <h1 class="text-4xl md:text-6xl font-bold leading-tight font-heading">
+            Sanatan Kriya
+            <span class="text-yellow-300 block">Divine HD Gallery</span>
           </h1>
 
           <p class="mt-6 text-base md:text-lg text-orange-50 max-w-2xl leading-8">
-            Explore a beautiful collection of spiritual wallpapers, divine portraits, temple visuals,
-            and devotional images in high quality.
+            Explore and download beautiful god images in high quality.
           </p>
-
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a href="#gallerySection" class="px-7 py-3.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-darkBrown font-semibold shadow-glow hover:scale-105 transition">
-              Explore Gallery
-            </a>
-            <a href="#galleryControls" class="px-7 py-3.5 rounded-full border border-white/40 text-white font-medium hover:bg-white/10 transition">
-              Search Images
-            </a>
-          </div>
         </div>
       </div>
     </section>
 
-<!-- INTRO -->
-<section class="py-20 relative">
-  <div class="max-w-5xl mx-auto px-6 lg:px-10 text-center reveal opacity-0 translate-y-10 transition-all duration-1000">
-    
-    <p class="text-bhagwa font-semibold tracking-[0.25em] uppercase text-sm">
-      Divine Collection
-    </p>
-
-    <h2 class="mt-4 text-3xl md:text-5xl font-bold text-deepBhagwa font-heading">
-      Experience the Beauty of Divine Art
-    </h2>
-
-    <p class="mt-6 text-base md:text-lg leading-8 text-darkBrown/80">
-      Explore a sacred collection of beautifully crafted images of gods, temples, and spiritual moments. 
-      Each image is designed to bring peace, devotion, and positivity into your space. 
-      Browse freely and download your favorite divine visuals in high quality.
-    </p>
-
-  </div>
-</section>
-
-    <!-- CONTROLS -->
-    <section id="galleryControls" class="pb-8">
+    <!-- SEARCH BAR -->
+    <section class="py-10">
       <div class="max-w-7xl mx-auto px-6 lg:px-10">
-        <div class="rounded-[2rem] bg-white/80 backdrop-blur-xl border border-orange-200 shadow-spiritual p-5 md:p-6 reveal opacity-0 translate-y-10 transition-all duration-1000">
+        <div class="rounded-[2rem] bg-white/80 backdrop-blur-xl border border-orange-200 shadow-spiritual p-5 md:p-6">
           <div class="flex flex-col lg:flex-row gap-4 lg:items-center lg:justify-between">
             <div>
-              <p class="text-bhagwa font-semibold tracking-[0.25em] uppercase text-sm">Browse Divine Images</p>
-              <h3 class="mt-2 text-2xl md:text-3xl font-bold text-deepBhagwa font-heading">
-                Search, Filter & Download
-              </h3>
+              <p class="text-bhagwa font-semibold tracking-[0.25em] uppercase text-sm">Search Divine Images</p>
+              <h2 class="mt-2 text-2xl md:text-3xl font-bold text-deepBhagwa font-heading">
+                Find by God Name
+              </h2>
             </div>
 
             <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
               <input
                 id="gallerySearch"
                 type="text"
-                placeholder="Search by name... like Krishna, Shiva, Ram"
-                class="w-full sm:w-[320px] rounded-2xl border border-orange-200 bg-white px-5 py-3.5 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition"
+                placeholder="Search Shiv, Ganesh, Krishna, Hanuman..."
+                class="w-full sm:w-[340px] rounded-2xl border border-orange-200 bg-white px-5 py-3.5 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition"
               />
 
               <select
                 id="galleryCategory"
                 class="w-full sm:w-[220px] rounded-2xl border border-orange-200 bg-white px-5 py-3.5 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition"
               >
-                <option value="all">All Categories</option>
+                <option value="all">All Gods</option>
+                <option value="shiv">Shiv</option>
+                <option value="ganesh">Ganesh</option>
                 <option value="krishna">Krishna</option>
-                <option value="shiva">Shiva</option>
                 <option value="ram">Ram</option>
                 <option value="hanuman">Hanuman</option>
                 <option value="durga">Durga</option>
-                <option value="ganesh">Ganesh</option>
-                <option value="temple">Temple</option>
+                <option value="laxmi">Laxmi</option>
+                <option value="saraswati">Saraswati</option>
               </select>
             </div>
           </div>
@@ -302,18 +293,22 @@
     </section>
 
     <!-- GALLERY -->
-    <section id="gallerySection" class="pb-20">
+    <section class="pb-20">
       <div class="max-w-7xl mx-auto px-6 lg:px-10">
-        <div id="galleryGrid" class="gallery-masonry"></div>
+
+        <div id="galleryGrid" class="gallery-grid"></div>
 
         <div id="emptyState" class="hidden mt-10">
           <div class="rounded-[2rem] border border-orange-200 bg-white/80 p-10 text-center shadow-spiritual">
             <h3 class="text-2xl font-bold text-deepBhagwa font-heading">No images found</h3>
             <p class="mt-3 text-darkBrown/75">
-              Try changing the search text or category filter.
+              Try a different search or category.
             </p>
           </div>
         </div>
+
+        <!-- PAGINATION -->
+        <div id="paginationWrapper" class="mt-12 flex flex-wrap items-center justify-center gap-3"></div>
       </div>
     </section>
 
@@ -328,6 +323,10 @@
                 alt="Sanatan Kriya Logo"
                 class="h-16 w-auto object-contain"
               />
+              <div>
+                <!-- <h3 class="text-2xl font-bold text-deepBhagwa">Sanatan Kriya</h3>
+                <p class="text-sm text-orange-700">Sacred Spiritual Services</p> -->
+              </div>
             </div>
             <p class="mt-5 text-darkBrown/75 leading-7 max-w-sm">
               Creating spiritually rich experiences through devotion, sacred music, divine storytelling, and traditional gatherings.
@@ -336,28 +335,86 @@
 
           <div>
             <h4 class="text-xl font-semibold text-deepBhagwa">Quick Links</h4>
-            <div class="mt-5 space-y-3 text-darkBrown/80">
-              <a href="index.html" class="block hover:text-bhagwa transition">Home</a>
-              <a href="gallery.html" class="block hover:text-bhagwa transition">HD Gallery</a>
-              <a href="index.html#contact" class="block hover:text-bhagwa transition">Contact</a>
-            </div>
+<div class="mt-5 space-y-3 text-darkBrown/80">
+  <a href="index.html" class="block hover:text-bhagwa transition">Home</a>
+  <a href="index.html#services" class="block hover:text-bhagwa transition">Services</a>
+  <a href="index.html#contact" class="block hover:text-bhagwa transition">Contact</a>
+  <a href="terms.html" class="block hover:text-bhagwa transition">Terms & Conditions</a>
+  <a href="privacy.html" class="block hover:text-bhagwa transition">Privacy Policy</a>
+</div>
           </div>
 
           <div>
-            <h4 class="text-xl font-semibold text-deepBhagwa">Connect With Us</h4>
-            <div class="mt-5 flex items-center gap-4 text-xl">
-              <a href="#" class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition">f</a>
-              <a href="#" class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition">in</a>
-              <a href="#" class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition">▶</a>
-              <a href="#" class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition">◎</a>
-            </div>
-            <p class="mt-6 text-darkBrown/80">
-              WhatsApp:
-              <a href="https://wa.me/919911826993" class="text-bhagwa font-semibold hover:underline">
-                +91 99118 26993
-              </a>
-            </p>
-          </div>
+  <h4 class="text-xl font-semibold text-deepBhagwa">Connect With Us</h4>
+
+  <div class="mt-5 flex items-center gap-4 text-xl flex-wrap">
+    <!-- YouTube -->
+    <a
+      href="https://www.youtube.com/@SannatanKriya/shorts"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="YouTube"
+      class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-current">
+        <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8ZM9.6 15.5v-7l6.1 3.5-6.1 3.5Z"/>
+      </svg>
+    </a>
+
+    <!-- LinkedIn -->
+    <a
+      href="https://www.linkedin.com/company/sanatankriya/posts/?feedView=all&viewAsMember=true"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn"
+      class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-current">
+        <path d="M4.98 3.5A2.49 2.49 0 1 0 5 8.48a2.49 2.49 0 0 0-.02-4.98ZM3 9h4v12H3zm7 0h3.83v1.71h.05c.53-1 1.84-2.06 3.79-2.06C21 8.65 21 11 21 14.05V21h-4v-6.03c0-1.44-.03-3.29-2-3.29-2 0-2.31 1.56-2.31 3.18V21H10z"/>
+      </svg>
+    </a>
+
+    <!-- Instagram -->
+    <a
+      href="https://www.instagram.com/sanatankriya/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram"
+      class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-current">
+        <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5zm0 2h10c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3zm11.5 1.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+      </svg>
+    </a>
+
+    <!-- Facebook -->
+    <a
+      href="https://www.facebook.com/profile.php?id=61582953758232"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook"
+      class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-current">
+        <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.87.24-1.46 1.5-1.46H16.7V4.02C16.4 3.98 15.5 3.9 14.46 3.9c-2.17 0-3.66 1.32-3.66 3.75V10H8v3h2.8v8z"/>
+      </svg>
+    </a>
+  </div>
+
+<p class="mt-6 text-darkBrown/80">
+  WhatsApp:
+  <a href="https://wa.me/919999883648" target="_blank" class="text-bhagwa font-semibold hover:underline">
+    +91 99998 83648
+  </a>
+</p>
+
+<p class="mt-6 text-darkBrown/80">
+  WhatsApp:
+  <a href="https://wa.me/919911826993" target="_blank" class="text-bhagwa font-semibold hover:underline">
+    +91 99118 26993
+  </a>
+</p>
+</div>
         </div>
 
         <div class="mt-12 pt-6 border-t border-orange-200 text-center text-sm text-darkBrown/65">

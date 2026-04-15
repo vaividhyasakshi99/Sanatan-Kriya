@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Associate Artists | Sanatan Kriya</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bhagwa: "#d97706",
+            deepBhagwa: "#b45309",
+            kesar: "#f59e0b",
+            softKesar: "#fde68a",
+            temple: "#fff7ed",
+            darkBrown: "#4a2c13",
+            goldLight: "#fffbeb"
+          },
+          fontFamily: {
+            heading: ["Georgia", "serif"],
+            body: ["Poppins", "sans-serif"]
+          },
+          boxShadow: {
+            spiritual: "0 10px 40px rgba(180, 83, 9, 0.18)",
+            glow: "0 0 30px rgba(245, 158, 11, 0.22)"
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #associate-hero,
+    #associate-intro,
+    #artist-categories,
+    #contact {
+      scroll-margin-top: 110px;
+    }
+
+    .artist-card-overlay {
+      background: linear-gradient(180deg, rgba(0,0,0,0.05) 15%, rgba(0,0,0,0.78) 100%);
+    }
+
+    .artist-card:hover .artist-card-image,
+    .artist-card:focus-visible .artist-card-image {
+      transform: scale(1.08);
+    }
+
+    .artist-card:hover .artist-card-overlay,
+    .artist-card:focus-visible .artist-card-overlay {
+      opacity: 1;
+    }
+
+    .artist-card:hover .artist-card-content,
+    .artist-card:focus-visible .artist-card-content {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .artist-slider-group {
+  position: relative;
+}
+
+.artist-slider-wrap {
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.artist-slider-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.artist-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  border: 1px solid rgba(251, 146, 60, 0.35);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b45309;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+  transition: all 0.25s ease;
+}
+
+.artist-slider-btn:hover:not(:disabled) {
+  background: #fff7ed;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.artist-slider-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.artist-slider-prev {
+  left: 0;
+}
+
+.artist-slider-next {
+  right: 0;
+}
+
+.artist-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .artist-slide {
+    flex: 0 0 calc((100% - 24px) / 2);
+    min-width: calc((100% - 24px) / 2);
+    max-width: calc((100% - 24px) / 2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .artist-slide {
+    flex: 0 0 calc((100% - 72px) / 4);
+    min-width: calc((100% - 72px) / 4);
+    max-width: calc((100% - 72px) / 4);
+  }
+}
+
+@media (max-width: 767px) {
+  .artist-slider-btn {
+    display: none;
+  }
+}
+  </style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4HKMJLZYDR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4HKMJLZYDR');
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1602755334357748');
+  fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+</head>
+
+<body class="font-body text-darkBrown overflow-x-hidden bg-[linear-gradient(180deg,#fffaf0_0%,#fff4d8_25%,#fff1dc_55%,#fff8ef_100%)]">
+  <!-- Meta Pixel Code -->
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=1602755334357748&ev=PageView&noscript=1"
+      alt=""
+    />
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <!-- SINGLE PNG MANDALA BACKGROUND -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <img
+      id="mainMandala"
+      src="assets/images/bg.jpg"
+      alt="Mandala Background"
+      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[780px] md:w-[980px] lg:w-[1150px] max-w-none opacity-[0.08] md:opacity-[0.1] select-none"
+    />
+  </div>
+
+  <div class="relative z-10">
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 border-b border-orange-200/70 bg-white/80 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="h-20 flex items-center justify-between">
+          <!-- LOGO -->
+          <a href="index.html" class="flex items-center gap-3">
+            <img
+              src="assets/images/SK logo.png"
+              alt="Sanatan Kriya Logo"
+              class="h-14 md:h-16 w-auto object-contain"
+            />
+          </a>
+
+          <!-- DESKTOP NAV -->
+          <nav class="hidden md:flex items-center gap-8 font-medium">
+            <a href="index.html" class="hover:text-bhagwa transition">Home</a>
+            <a href="calendar.html" class="hover:text-bhagwa transition">Calendar</a>
+            <a href="videos.html" class="hover:text-bhagwa transition">Dev Katha</a>
+            <a href="gallery.html" class="hover:text-bhagwa transition">HD Gallery</a>
+            <a href="aarti.html" class="hover:text-bhagwa transition">Aarti</a>
+            <a href="associate-artists.html" class="text-bhagwa font-semibold">Associate Artists</a>
+
+            <div class="relative group">
+              <button class="flex items-center gap-2 hover:text-bhagwa transition" type="button">
+                Services
+                <svg class="w-4 h-4 mt-[1px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+
+              <div class="absolute left-0 top-full mt-3 w-64 rounded-2xl bg-white shadow-2xl border border-orange-100 p-3 opacity-0 invisible translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+                <a href="index.html#bhajan" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Bhajan</a>
+                <a href="index.html#chauki" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Mata Ki Chauki</a>
+                <a href="index.html#jagran" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Jagran</a>
+                <a href="index.html#sundar-kand" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Sundar Kand</a>
+                <a href="index.html#katha" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Katha</a>
+                <a href="index.html#ramayan" class="block px-4 py-3 rounded-xl hover:bg-orange-50 text-sm">Ramayan</a>
+              </div>
+            </div>
+          </nav>
+
+          <div class="flex items-center gap-3">
+            <a href="#contact" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium shadow-spiritual hover:scale-105 transition">
+              Book Now
+            </a>
+
+            <button
+              id="menuToggle"
+              class="md:hidden w-11 h-11 rounded-full border border-orange-200 bg-white flex items-center justify-center"
+              aria-label="Open menu"
+              aria-expanded="false"
+              type="button"
+            >
+              <span class="relative block w-5 h-5">
+                <span class="absolute left-0 top-[3px] w-5 h-0.5 bg-deepBhagwa rounded transition-all duration-300 line1"></span>
+                <span class="absolute left-0 top-[9px] w-5 h-0.5 bg-deepBhagwa rounded transition-all duration-300 line2"></span>
+                <span class="absolute left-0 top-[15px] w-5 h-0.5 bg-deepBhagwa rounded transition-all duration-300 line3"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu" class="md:hidden hidden pb-5">
+          <div class="rounded-2xl border border-orange-100 bg-white/95 p-4 space-y-3 shadow-lg">
+            <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Home</a>
+            <a href="calendar.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Calendar</a>
+            <a href="videos.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Dev Katha</a>
+            <a href="gallery.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">HD Gallery</a>
+            <a href="aarti.html" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Aarti</a>
+            <a href="associate-artists.html" class="block px-3 py-2 rounded-xl bg-orange-50 text-bhagwa font-semibold">Associate Artists</a>
+
+            <a href="index.html#bhajan" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Bhajan</a>
+            <a href="index.html#chauki" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Mata Ki Chauki</a>
+            <a href="index.html#jagran" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Jagran</a>
+            <a href="index.html#sundar-kand" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Sundar Kand</a>
+            <a href="index.html#katha" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Katha</a>
+            <a href="index.html#ramayan" class="block px-3 py-2 rounded-xl hover:bg-orange-50">Ramayan</a>
+
+            <a href="#contact" class="block text-center px-4 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium">
+              Book Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="associate-hero" class="relative min-h-[88vh] flex items-center overflow-hidden">
+      <div class="absolute inset-0">
+        <!-- <img
+          src="assets/images/associate-artists/hero.jpg"
+          alt="Associate Artists"
+          class="w-full h-full object-cover scale-105"
+        /> -->
+        <!-- <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.28),rgba(0,0,0,0.62))]"></div> -->
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-6 lg:px-10 w-full py-20">
+        <div class="max-w-3xl reveal opacity-0 translate-y-10 transition-all duration-1000 text-white">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-5">
+            <span class="w-2.5 h-2.5 rounded-full bg-yellow-300 animate-pulse"></span>
+            <span class="text-sm tracking-wide">Curated Spiritual Performers</span>
+          </div>
+
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight font-heading">
+            Associate Artists
+            <span class="text-yellow-300 block">For Divine Experiences</span>
+          </h1>
+
+          <p class="mt-6 text-base md:text-lg text-orange-50 max-w-2xl leading-8">
+            Explore a curated selection of kathavachaks, bhajan singers, spiritual bands, and devotional DJs
+            for spiritual gatherings, sacred celebrations, cultural evenings, and devotional experiences.
+            Each artist is chosen to bring grace, depth, energy, and devotional connection to your event.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#artist-categories" class="px-7 py-3.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-darkBrown font-semibold shadow-glow hover:scale-105 transition">
+              Explore Artists
+            </a>
+            <a href="#contact" class="px-7 py-3.5 rounded-full border border-white/40 text-white font-medium hover:bg-white/10 transition">
+              Enquire Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section id="associate-intro" class="py-20 relative">
+      <div class="max-w-5xl mx-auto px-6 lg:px-10 text-center reveal opacity-0 translate-y-10 transition-all duration-1000">
+        <p class="text-bhagwa font-semibold tracking-[0.25em] uppercase text-sm">Artist Curation</p>
+        <h2 class="mt-4 text-3xl md:text-5xl font-bold text-deepBhagwa font-heading">
+          Premium Devotional Talent For Every Spiritual Occasion
+        </h2>
+        <p class="mt-6 text-base md:text-lg leading-8 text-darkBrown/80">
+          From soulful kathas and bhakti-filled bhajans to uplifting live devotional bands and immersive
+          devotional DJ sets, our associate artists are selected to elevate the spiritual atmosphere of every
+          gathering. Whether the occasion is intimate, grand, traditional, or contemporary, this collection is
+          designed to help you find the right artist with ease.
+        </p>
+      </div>
+    </section>
+
+    <!-- CATEGORY HIGHLIGHTS
+    <section class="pb-6">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 reveal opacity-0 translate-y-10 transition-all duration-1000">
+          <div class="rounded-[2rem] border border-orange-200 bg-white/80 backdrop-blur-sm p-6 shadow-spiritual text-center">
+            <p class="text-sm uppercase tracking-[0.28em] text-bhagwa font-semibold">Category 01</p>
+            <h3 class="mt-3 text-2xl font-bold text-deepBhagwa font-heading">Kathavachak</h3>
+            <p class="mt-3 text-darkBrown/75 leading-7">Sacred narration, spiritual discourse, divine storytelling, and dharmic guidance.</p>
+          </div>
+
+          <div class="rounded-[2rem] border border-orange-200 bg-white/80 backdrop-blur-sm p-6 shadow-spiritual text-center">
+            <p class="text-sm uppercase tracking-[0.28em] text-bhagwa font-semibold">Category 02</p>
+            <h3 class="mt-3 text-2xl font-bold text-deepBhagwa font-heading">Bhajan Singers</h3>
+            <p class="mt-3 text-darkBrown/75 leading-7">Soulful bhakti performances for satsangs, devotional evenings, and sacred gatherings.</p>
+          </div>
+
+          <div class="rounded-[2rem] border border-orange-200 bg-white/80 backdrop-blur-sm p-6 shadow-spiritual text-center">
+            <p class="text-sm uppercase tracking-[0.28em] text-bhagwa font-semibold">Category 03</p>
+            <h3 class="mt-3 text-2xl font-bold text-deepBhagwa font-heading">Spiritual Bands</h3>
+            <p class="mt-3 text-darkBrown/75 leading-7">Live ensemble performances with a devotional yet premium stage presence.</p>
+          </div>
+
+          <div class="rounded-[2rem] border border-orange-200 bg-white/80 backdrop-blur-sm p-6 shadow-spiritual text-center">
+            <p class="text-sm uppercase tracking-[0.28em] text-bhagwa font-semibold">Category 04</p>
+            <h3 class="mt-3 text-2xl font-bold text-deepBhagwa font-heading">Devotional DJ</h3>
+            <p class="mt-3 text-darkBrown/75 leading-7">Contemporary devotional energy blends for immersive spiritual celebrations.</p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ARTISTS GRID -->
+    <section id="artist-categories" class="py-16">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="text-center reveal opacity-0 translate-y-10 transition-all duration-1000">
+          <p class="text-bhagwa font-semibold tracking-[0.25em] uppercase text-sm">Browse Artists</p>
+          <h2 class="mt-4 text-3xl md:text-5xl font-bold text-deepBhagwa font-heading">
+            Discover Artists By Category
+          </h2>
+          <p class="mt-5 max-w-3xl mx-auto text-darkBrown/80 leading-8">
+            Click any artist card to view details, category, suitability, and book your preferred artist directly.
+          </p>
+        </div>
+
+       <!-- KATHAVACHAK -->
+<div class="mt-16 reveal opacity-0 translate-y-10 transition-all duration-1000">
+  <div class="flex items-center justify-between gap-4 flex-wrap mb-7">
+    <div>
+      <h3 class="text-3xl md:text-4xl font-bold text-deepBhagwa font-heading">Kathavachak</h3>
+    </div>
+    <div class="h-px flex-1 min-w-[90px] bg-gradient-to-r from-orange-200 via-orange-300 to-transparent"></div>
+  </div>
+
+  <div class="artist-slider-group">
+    <button
+      type="button"
+      class="artist-slider-btn artist-slider-prev"
+      data-slider-prev
+      aria-label="Previous Kathavachak artists"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+
+    <div class="artist-slider-wrap mx-0 md:mx-[56px]">
+      <div class="artist-slider-track">
+        <button
+          type="button"
+          class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card
+          data-artist-name="Acharya Devendra Shastri"
+          data-artist-category="Kathavachak"
+          data-artist-image="assets/images/associate-artists/kathavachak-1.jpg"
+          data-artist-description="Known for spiritually engaging kathas that blend divine storytelling with emotional depth, scriptural insight, and devotional connection."
+          data-artist-suitable="Bhagwat Katha, Ram Katha, spiritual seminars, satsangs, family religious events"
+          aria-label="Open details for Acharya Devendra Shastri"
+        >
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/kathavachak-1.jpg" alt="Acharya Devendra Shastri" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Kathavachak</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Acharya Devendra Shastri</h4>
+            </div>
+          </div>
+        </button>
+
+        <button
+          type="button"
+          class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card
+          data-artist-name="Pujya Harinarayan Ji"
+          data-artist-category="Kathavachak"
+          data-artist-image="assets/images/associate-artists/kathavachak-2.jpg"
+          data-artist-description="Delivers devotional kathas in a graceful, traditional style with clarity, bhakti, and audience connection."
+          data-artist-suitable="Temple events, pravachan sessions, festive kathas, community spiritual gatherings"
+          aria-label="Open details for Pujya Harinarayan Ji"
+        >
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/kathavachak-2.jpg" alt="Pujya Harinarayan Ji" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Kathavachak</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Pujya Harinarayan Ji</h4>
+            </div>
+          </div>
+        </button>
+
+        <button
+          type="button"
+          class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card
+          data-artist-name="Swami Aditya Das"
+          data-artist-category="Kathavachak"
+          data-artist-image="assets/images/associate-artists/kathavachak-3.jpg"
+          data-artist-description="A refined storyteller whose spiritual narrations create calm, reflection, and divine emotional resonance."
+          data-artist-suitable="Corporate spiritual events, intimate kathas, cultural evenings, premium devotional gatherings"
+          aria-label="Open details for Swami Aditya Das"
+        >
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/kathavachak-3.jpg" alt="Swami Aditya Das" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Kathavachak</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Swami Aditya Das</h4>
+            </div>
+          </div>
+        </button>
+
+        <button
+          type="button"
+          class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card
+          data-artist-name="Acharya Raman Ji Maharaj"
+          data-artist-category="Kathavachak"
+          data-artist-image="assets/images/associate-artists/kathavachak-4.jpg"
+          data-artist-description="Blends deep scriptural narration with accessible expression, making spiritual teachings more engaging for all age groups."
+          data-artist-suitable="Large-scale kathas, public devotional programs, family events, religious festivals"
+          aria-label="Open details for Acharya Raman Ji Maharaj"
+        >
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/kathavachak-4.jpg" alt="Acharya Raman Ji Maharaj" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Kathavachak</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Acharya Raman Ji Maharaj</h4>
+            </div>
+          </div>
+        </button>
+
+        <button
+          type="button"
+          class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card
+          data-artist-name="Vedant Krishna Maharaj"
+          data-artist-category="Kathavachak"
+          data-artist-image="assets/images/associate-artists/kathavachak-5.jpg"
+          data-artist-description="A serene and impactful speaker known for devotional storytelling rooted in scripture and practical life wisdom."
+          data-artist-suitable="Premium private kathas, dharmic lectures, family functions, temple ceremonies"
+          aria-label="Open details for Vedant Krishna Maharaj"
+        >
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/kathavachak-5.jpg" alt="Vedant Krishna Maharaj" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Kathavachak</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Vedant Krishna Maharaj</h4>
+            </div>
+          </div>
+        </button>
+
+        <button
+          type="button"
+          class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card
+          data-artist-name="Sant Govind Charan"
+          data-artist-category="Kathavachak"
+          data-artist-image="assets/images/associate-artists/kathavachak-6.jpg"
+          data-artist-description="Creates emotionally resonant spiritual sessions with a traditional devotional approach and strong audience presence."
+          data-artist-suitable="Bhakti gatherings, pravachan sessions, satsangs, festive spiritual programs"
+          aria-label="Open details for Sant Govind Charan"
+        >
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/kathavachak-6.jpg" alt="Sant Govind Charan" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Kathavachak</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Sant Govind Charan</h4>
+            </div>
+          </div>
+        </button>
+
+        <button
+          type="button"
+          class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card
+          data-artist-name="Shri Mahesh Vyas"
+          data-artist-category="Kathavachak"
+          data-artist-image="assets/images/associate-artists/kathavachak-7.jpg"
+          data-artist-description="Known for uplifting kathas delivered with warmth, clarity, and a devotional atmosphere suited for premium gatherings."
+          data-artist-suitable="Community kathas, Ramayan events, Bhagwat weeks, family devotional occasions"
+          aria-label="Open details for Shri Mahesh Vyas"
+        >
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/kathavachak-7.jpg" alt="Shri Mahesh Vyas" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Kathavachak</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Shri Mahesh Vyas</h4>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="artist-slider-btn artist-slider-next"
+      data-slider-next
+      aria-label="Next Kathavachak artists"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+        <!-- BHAJAN SINGERS -->
+<div class="mt-20 reveal opacity-0 translate-y-10 transition-all duration-1000">
+  <div class="flex items-center justify-between gap-4 flex-wrap mb-7">
+    <div>
+      <h3 class="text-3xl md:text-4xl font-bold text-deepBhagwa font-heading">Bhajan Singers</h3>
+    </div>
+    <div class="h-px flex-1 min-w-[90px] bg-gradient-to-r from-orange-200 via-orange-300 to-transparent"></div>
+  </div>
+
+  <div class="artist-slider-group">
+    <button type="button" class="artist-slider-btn artist-slider-prev" data-slider-prev aria-label="Previous Bhajan Singers">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+
+    <div class="artist-slider-wrap mx-0 md:mx-[56px]">
+      <div class="artist-slider-track">
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Bhakti Rasika Meera" data-artist-category="Bhajan Singers"
+          data-artist-image="assets/images/associate-artists/bhajan-singer-1.jpg"
+          data-artist-description="A soulful devotional singer known for heartfelt bhajans and spiritually immersive live performances."
+          data-artist-suitable="Bhajan sandhya, satsang evenings, temple gatherings, devotional family events"
+          aria-label="Open details for Bhakti Rasika Meera">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/bhajan-singer-1.jpg" alt="Bhakti Rasika Meera" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Bhajan Singers</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Bhakti Rasika Meera</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Suresh Bhakti Sagar" data-artist-category="Bhajan Singers"
+          data-artist-image="assets/images/associate-artists/bhajan-singer-2.jpg"
+          data-artist-description="Specializes in traditional and uplifting bhajans with a graceful stage presence and strong devotional energy."
+          data-artist-suitable="Mata ki chauki, jagran, bhajan evenings, community celebrations"
+          aria-label="Open details for Suresh Bhakti Sagar">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/bhajan-singer-2.jpg" alt="Suresh Bhakti Sagar" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Bhajan Singers</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Suresh Bhakti Sagar</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Ananya Hari Bhajan" data-artist-category="Bhajan Singers"
+          data-artist-image="assets/images/associate-artists/bhajan-singer-3.jpg"
+          data-artist-description="Brings softness, depth, and a modern devotional presence to traditional bhakti performances."
+          data-artist-suitable="Premium devotional nights, spiritual retreats, cultural programs, intimate satsangs"
+          aria-label="Open details for Ananya Hari Bhajan">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/bhajan-singer-3.jpg" alt="Ananya Hari Bhajan" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Bhajan Singers</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Ananya Hari Bhajan</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Raghav Bhav Sangeet" data-artist-category="Bhajan Singers"
+          data-artist-image="assets/images/associate-artists/bhajan-singer-4.jpg"
+          data-artist-description="A devotional performer known for high audience engagement, powerful vocals, and uplifting bhakti mood."
+          data-artist-suitable="Festive bhajan nights, jagran support sets, public spiritual events, large gatherings"
+          aria-label="Open details for Raghav Bhav Sangeet">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/bhajan-singer-4.jpg" alt="Raghav Bhav Sangeet" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Bhajan Singers</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Raghav Bhav Sangeet</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Kirtan Jyoti Sharma" data-artist-category="Bhajan Singers"
+          data-artist-image="assets/images/associate-artists/bhajan-singer-5.jpg"
+          data-artist-description="Carries a devotional softness and elegant live presence ideal for intimate and premium bhakti events."
+          data-artist-suitable="Temple evenings, devotional retreats, spiritual celebrations, private satsangs"
+          aria-label="Open details for Kirtan Jyoti Sharma">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/bhajan-singer-5.jpg" alt="Kirtan Jyoti Sharma" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Bhajan Singers</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Kirtan Jyoti Sharma</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Hari Prem Vani" data-artist-category="Bhajan Singers"
+          data-artist-image="assets/images/associate-artists/bhajan-singer-6.jpg"
+          data-artist-description="Blends emotional expression with devotional depth to create memorable and spiritually rich bhajan sessions."
+          data-artist-suitable="Family functions, bhajan evenings, satsang programs, cultural devotional nights"
+          aria-label="Open details for Hari Prem Vani">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/bhajan-singer-6.jpg" alt="Hari Prem Vani" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Bhajan Singers</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Hari Prem Vani</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Surili Bhakti Mala" data-artist-category="Bhajan Singers"
+          data-artist-image="assets/images/associate-artists/bhajan-singer-7.jpg"
+          data-artist-description="A warm and graceful devotional voice suited for soulful gatherings and elegant spiritual settings."
+          data-artist-suitable="Bhajan sandhya, spiritual get-togethers, devotional programs, temple events"
+          aria-label="Open details for Surili Bhakti Mala">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/bhajan-singer-7.jpg" alt="Surili Bhakti Mala" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Bhajan Singers</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Surili Bhakti Mala</h4>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <button type="button" class="artist-slider-btn artist-slider-next" data-slider-next aria-label="Next Bhajan Singers">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+       <!-- SPIRITUAL BANDS -->
+<div class="mt-20 reveal opacity-0 translate-y-10 transition-all duration-1000">
+  <div class="flex items-center justify-between gap-4 flex-wrap mb-7">
+    <div>
+      <h3 class="text-3xl md:text-4xl font-bold text-deepBhagwa font-heading">Spiritual Bands</h3>
+    </div>
+    <div class="h-px flex-1 min-w-[90px] bg-gradient-to-r from-orange-200 via-orange-300 to-transparent"></div>
+  </div>
+
+  <div class="artist-slider-group">
+    <button type="button" class="artist-slider-btn artist-slider-prev" data-slider-prev aria-label="Previous Spiritual Bands">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+
+    <div class="artist-slider-wrap mx-0 md:mx-[56px]">
+      <div class="artist-slider-track">
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Divine Rhythm Collective" data-artist-category="Spiritual Bands"
+          data-artist-image="assets/images/associate-artists/spiritual-band-1.jpg"
+          data-artist-description="A live spiritual ensemble offering elevated devotional music with layered vocals, percussion, and immersive sonic energy."
+          data-artist-suitable="Large satsangs, cultural festivals, premium spiritual evenings, stage performances"
+          aria-label="Open details for Divine Rhythm Collective">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/spiritual-band-1.jpg" alt="Divine Rhythm Collective" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Spiritual Bands</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Divine Rhythm Collective</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Anhad Naad Ensemble" data-artist-category="Spiritual Bands"
+          data-artist-image="assets/images/associate-artists/spiritual-band-2.jpg"
+          data-artist-description="Known for refined live devotional sets that combine traditional bhakti instrumentation with a premium stage presentation."
+          data-artist-suitable="Temple events, devotional concerts, spiritual retreats, curated bhakti experiences"
+          aria-label="Open details for Anhad Naad Ensemble">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/spiritual-band-2.jpg" alt="Anhad Naad Ensemble" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Spiritual Bands</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Anhad Naad Ensemble</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Bhakti Soundscape" data-artist-category="Spiritual Bands"
+          data-artist-image="assets/images/associate-artists/spiritual-band-3.jpg"
+          data-artist-description="Creates immersive devotional atmospheres through live band arrangements, harmonies, and uplifting sacred expression."
+          data-artist-suitable="Corporate spiritual programs, festive gatherings, stage-based devotional events, community celebrations"
+          aria-label="Open details for Bhakti Soundscape">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/spiritual-band-3.jpg" alt="Bhakti Soundscape" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Spiritual Bands</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Bhakti Soundscape</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Satya Dhun Live" data-artist-category="Spiritual Bands"
+          data-artist-image="assets/images/associate-artists/spiritual-band-4.jpg"
+          data-artist-description="A devotional live band offering high-energy spiritual performance experiences with modern polish and traditional roots."
+          data-artist-suitable="Open-air events, premium devotional nights, youth spiritual festivals, immersive bhakti sessions"
+          aria-label="Open details for Satya Dhun Live">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/spiritual-band-4.jpg" alt="Satya Dhun Live" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Spiritual Bands</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Satya Dhun Live</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Naad Aradhana Crew" data-artist-category="Spiritual Bands"
+          data-artist-image="assets/images/associate-artists/spiritual-band-5.jpg"
+          data-artist-description="A polished ensemble blending traditional devotional arrangements with premium staging and immersive live energy."
+          data-artist-suitable="Curated spiritual nights, stage programs, bhakti concerts, cultural events"
+          aria-label="Open details for Naad Aradhana Crew">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/spiritual-band-5.jpg" alt="Naad Aradhana Crew" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Spiritual Bands</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Naad Aradhana Crew</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Shivam Bhakti Ensemble" data-artist-category="Spiritual Bands"
+          data-artist-image="assets/images/associate-artists/spiritual-band-6.jpg"
+          data-artist-description="Brings a devotional concert-like atmosphere with refined vocals, percussion, and elevated sacred presentation."
+          data-artist-suitable="Temple festivals, devotional concerts, retreat evenings, immersive stage sessions"
+          aria-label="Open details for Shivam Bhakti Ensemble">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/spiritual-band-6.jpg" alt="Shivam Bhakti Ensemble" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Spiritual Bands</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Shivam Bhakti Ensemble</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Prem Dhara Live" data-artist-category="Spiritual Bands"
+          data-artist-image="assets/images/associate-artists/spiritual-band-7.jpg"
+          data-artist-description="An expressive live devotional band offering graceful energy, harmony, and a premium spiritual ambience."
+          data-artist-suitable="Open devotional programs, premium bhakti nights, community festivals, spiritual gatherings"
+          aria-label="Open details for Prem Dhara Live">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/spiritual-band-7.jpg" alt="Prem Dhara Live" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Spiritual Bands</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Prem Dhara Live</h4>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <button type="button" class="artist-slider-btn artist-slider-next" data-slider-next aria-label="Next Spiritual Bands">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+        <!-- DEVOTIONAL DJ -->
+<div class="mt-20 reveal opacity-0 translate-y-10 transition-all duration-1000">
+  <div class="flex items-center justify-between gap-4 flex-wrap mb-7">
+    <div>
+      <h3 class="text-3xl md:text-4xl font-bold text-deepBhagwa font-heading">Devotional DJ</h3>
+    </div>
+    <div class="h-px flex-1 min-w-[90px] bg-gradient-to-r from-orange-200 via-orange-300 to-transparent"></div>
+  </div>
+
+  <div class="artist-slider-group">
+    <button type="button" class="artist-slider-btn artist-slider-prev" data-slider-prev aria-label="Previous Devotional DJs">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+
+    <div class="artist-slider-wrap mx-0 md:mx-[56px]">
+      <div class="artist-slider-track">
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="DJ Bhakti Vibes" data-artist-category="Devotional DJ"
+          data-artist-image="assets/images/associate-artists/devotional-dj-1.jpg"
+          data-artist-description="Blends devotional soundscapes with contemporary energy to create immersive and vibrant spiritual event experiences."
+          data-artist-suitable="Youth devotional events, festive nights, spiritual cultural concerts, curated bhakti gatherings"
+          aria-label="Open details for DJ Bhakti Vibes">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/devotional-dj-1.jpg" alt="DJ Bhakti Vibes" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Devotional DJ</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">DJ Bhakti Vibes</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Naad Trance Seva" data-artist-category="Devotional DJ"
+          data-artist-image="assets/images/associate-artists/devotional-dj-2.jpg"
+          data-artist-description="Offers premium devotional DJ experiences that balance sacred atmosphere with rhythm, lights, and spiritual upliftment."
+          data-artist-suitable="Large events, devotional after-evening sessions, youth-centric programs, immersive stage experiences"
+          aria-label="Open details for Naad Trance Seva">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/devotional-dj-2.jpg" alt="Naad Trance Seva" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Devotional DJ</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Naad Trance Seva</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Sacred Pulse DJ" data-artist-category="Devotional DJ"
+          data-artist-image="assets/images/associate-artists/devotional-dj-3.jpg"
+          data-artist-description="A modern devotional performer crafting energetic sacred sound journeys for immersive and memorable event moments."
+          data-artist-suitable="Festival stages, spiritual youth celebrations, devotional entertainment sets, modern bhakti events"
+          aria-label="Open details for Sacred Pulse DJ">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/devotional-dj-3.jpg" alt="Sacred Pulse DJ" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Devotional DJ</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Sacred Pulse DJ</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Divine Drop Mix" data-artist-category="Devotional DJ"
+          data-artist-image="assets/images/associate-artists/devotional-dj-4.jpg"
+          data-artist-description="Brings a vibrant devotional mix format for events that seek spiritual depth with a contemporary experiential sound."
+          data-artist-suitable="Concert-style devotional nights, premium celebration stages, cultural youth programs, special themed events"
+          aria-label="Open details for Divine Drop Mix">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/devotional-dj-4.jpg" alt="Divine Drop Mix" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Devotional DJ</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Divine Drop Mix</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Mantra Motion DJ" data-artist-category="Devotional DJ"
+          data-artist-image="assets/images/associate-artists/devotional-dj-5.jpg"
+          data-artist-description="Builds immersive devotional sets with rhythm, atmosphere, and premium event energy for modern spiritual audiences."
+          data-artist-suitable="Stage devotional sets, youth evenings, spiritual concerts, energetic cultural nights"
+          aria-label="Open details for Mantra Motion DJ">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/devotional-dj-5.jpg" alt="Mantra Motion DJ" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Devotional DJ</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Mantra Motion DJ</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Trinetra Beats" data-artist-category="Devotional DJ"
+          data-artist-image="assets/images/associate-artists/devotional-dj-6.jpg"
+          data-artist-description="Combines sacred sonic textures with polished modern transitions for a distinctive devotional performance style."
+          data-artist-suitable="Curated spiritual nights, concert-style events, youth festivals, immersive devotional experiences"
+          aria-label="Open details for Trinetra Beats">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/devotional-dj-6.jpg" alt="Trinetra Beats" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Devotional DJ</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Trinetra Beats</h4>
+            </div>
+          </div>
+        </button>
+
+        <button type="button" class="artist-slide artist-card group relative rounded-[2rem] overflow-hidden shadow-spiritual border border-orange-100 bg-white text-left focus:outline-none focus:ring-2 focus:ring-orange-300"
+          data-artist-card data-artist-name="Kirtan Bass Flow" data-artist-category="Devotional DJ"
+          data-artist-image="assets/images/associate-artists/devotional-dj-7.jpg"
+          data-artist-description="A contemporary devotional DJ experience crafted for modern audiences who want bhakti, atmosphere, and powerful event energy."
+          data-artist-suitable="Festival stages, themed devotional events, youth gatherings, premium celebration nights"
+          aria-label="Open details for Kirtan Bass Flow">
+          <div class="relative h-[420px]">
+            <img src="assets/images/associate-artists/devotional-dj-7.jpg" alt="Kirtan Bass Flow" class="artist-card-image w-full h-full object-cover transition duration-700 ease-out" />
+            <div class="artist-card-overlay absolute inset-0 opacity-0 transition duration-500"></div>
+            <div class="artist-card-content absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-5 transition duration-500">
+              <p class="text-[11px] uppercase tracking-[0.25em] text-orange-200">Devotional DJ</p>
+              <h4 class="mt-2 text-2xl font-bold text-white font-heading">Kirtan Bass Flow</h4>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <button type="button" class="artist-slider-btn artist-slider-next" data-slider-next aria-label="Next Devotional DJs">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+</section>
+    <!-- MODAL -->
+    <div id="artistModal" class="fixed inset-0 z-[80] hidden opacity-0 transition duration-300">
+      <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" data-close-modal></div>
+
+      <div class="relative min-h-screen flex items-center justify-center px-4 py-6 md:py-10">
+<div
+  id="artistModalPanel"
+  class="w-full max-w-4xl rounded-[1.75rem] bg-[linear-gradient(180deg,#fffaf3_0%,#fff6e8_100%)] border border-orange-200 shadow-[0_24px_60px_rgba(0,0,0,0.20)] overflow-hidden opacity-0 translate-y-8 scale-95 transition duration-300 max-h-[86vh] flex flex-col"
+>
+          <div class="grid lg:grid-cols-[0.95fr_1.05fr] overflow-y-auto">
+            <div class="relative min-h-[240px] lg:min-h-[520px] bg-orange-100">
+              <img
+                id="artistModalImage"
+                src="assets/images/associate-artists/kathavachak-1.jpg"
+                alt="Artist"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.08),rgba(0,0,0,0.42))]"></div>
+            </div>
+
+            <div class="relative p-5 md:p-7 lg:p-8 pb-10 md:pb-12">
+              <button
+                type="button"
+                class="absolute top-5 right-5 w-11 h-11 rounded-full border border-orange-200 bg-white text-deepBhagwa flex items-center justify-center hover:bg-orange-50 transition"
+                data-close-modal
+                aria-label="Close artist details"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6l-12 12"></path>
+                </svg>
+              </button>
+
+              <p id="artistModalCategory" class="pr-12 text-sm uppercase tracking-[0.28em] text-bhagwa font-semibold">
+                Kathavachak
+              </p>
+
+              <h3 id="artistModalName" class="mt-4 text-3xl md:text-5xl font-bold text-deepBhagwa font-heading leading-tight">
+                Acharya Devendra Shastri
+              </h3>
+
+              <div class="mt-8">
+                <h4 class="text-lg font-semibold text-deepBhagwa">About the Artist</h4>
+                <p id="artistModalDescription" class="mt-3 text-darkBrown/80 leading-8">
+                  Known for spiritually engaging kathas that blend divine storytelling with emotional depth, scriptural insight, and devotional connection.
+                </p>
+              </div>
+
+              <div class="mt-8">
+                <h4 class="text-lg font-semibold text-deepBhagwa">Suitable For</h4>
+                <p id="artistModalSuitable" class="mt-3 text-darkBrown/80 leading-8">
+                  Bhagwat Katha, Ram Katha, spiritual seminars, satsangs, family religious events
+                </p>
+              </div>
+
+              <div class="mt-10 flex flex-wrap gap-4">
+                <button
+                  id="artistModalBookBtn"
+                  type="button"
+                  class="px-7 py-3.5 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 text-white font-semibold shadow-spiritual hover:scale-105 transition"
+                >
+                  Book Now
+                </button>
+
+                <button
+                  type="button"
+                  class="px-7 py-3.5 rounded-full border border-orange-200 text-deepBhagwa font-medium hover:bg-orange-50 transition"
+                  data-close-modal
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA FORM -->
+    <section id="contact" class="py-20">
+      <div class="max-w-4xl mx-auto px-6 lg:px-10">
+        <div class="rounded-[2.2rem] bg-white/80 backdrop-blur-xl border border-orange-200 shadow-spiritual p-6 md:p-10 reveal opacity-0 translate-y-10 transition-all duration-1000">
+          <div class="text-center">
+            <p class="text-bhagwa font-semibold tracking-[0.25em] uppercase text-sm">Get in Touch</p>
+            <h2 class="mt-4 text-3xl md:text-5xl font-bold text-deepBhagwa font-heading">Book Your Preferred Artist</h2>
+            <p class="mt-4 text-darkBrown/75 leading-8 max-w-2xl mx-auto">
+              Share your requirement below and let us know which artist or performance style you want for your spiritual event.
+            </p>
+          </div>
+
+          <form id="contactForm" action="mailer.php" method="POST" novalidate class="mt-10 grid md:grid-cols-2 gap-5">
+            <input type="hidden" name="form_type" value="Sanatan Kriya Home Page Enquiry" />
+
+            <div>
+              <label for="name" class="block text-sm font-medium mb-2 text-deepBhagwa">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                class="w-full rounded-2xl border border-orange-200 bg-white px-5 py-4 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition"
+              />
+              <p id="nameError" class="mt-1 text-sm text-red-600 hidden">Please enter your full name.</p>
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-medium mb-2 text-deepBhagwa">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your number"
+                maxlength="10"
+                class="w-full rounded-2xl border border-orange-200 bg-white px-5 py-4 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition"
+              />
+              <p id="phoneError" class="mt-1 text-sm text-red-600 hidden">Phone number must be exactly 10 digits.</p>
+            </div>
+
+            <div class="md:col-span-2">
+              <label for="email" class="block text-sm font-medium mb-2 text-deepBhagwa">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                class="w-full rounded-2xl border border-orange-200 bg-white px-5 py-4 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition"
+              />
+              <p id="emailError" class="mt-1 text-sm text-red-600 hidden">Please enter a valid email address.</p>
+            </div>
+
+            <div class="md:col-span-2">
+              <label for="service" class="block text-sm font-medium mb-2 text-deepBhagwa">Select Service</label>
+              <select
+                id="service"
+                name="service"
+                class="w-full rounded-2xl border border-orange-200 bg-white px-5 py-4 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition"
+              >
+                <option value="">Choose a service</option>
+                <option value="Kathavachak">Kathavachak</option>
+                <option value="Bhajan Singers">Bhajan Singers</option>
+                <option value="Spiritual Bands">Spiritual Bands</option>
+                <option value="Devotional DJ">Devotional DJ</option>
+              </select>
+              <p id="serviceError" class="mt-1 text-sm text-red-600 hidden">Please select a service.</p>
+            </div>
+
+            <div class="md:col-span-2">
+              <label for="query" class="block text-sm font-medium mb-2 text-deepBhagwa">Your Query</label>
+              <textarea
+                id="query"
+                name="query"
+                rows="6"
+                maxlength="1000"
+                placeholder="Write your query here"
+                class="w-full rounded-2xl border border-orange-200 bg-white px-5 py-4 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition resize-none"
+              ></textarea>
+              <p id="queryError" class="mt-1 text-sm text-red-600 hidden">Please enter your query.</p>
+            </div>
+
+            <div class="md:col-span-2 text-center pt-2">
+              <button
+                type="submit"
+                class="px-10 py-4 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 text-white font-semibold shadow-spiritual hover:scale-105 transition"
+              >
+                Submit Enquiry
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative pt-16 pb-8 border-t border-orange-200 bg-gradient-to-b from-orange-50/50 to-yellow-50/40">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="grid md:grid-cols-3 gap-10 items-start">
+          <div>
+            <div class="flex items-center gap-3">
+              <img
+                src="assets/images/SK logo.png"
+                alt="Sanatan Kriya Logo"
+                class="h-16 w-auto object-contain"
+              />
+            </div>
+            <p class="mt-5 text-darkBrown/75 leading-7 max-w-sm">
+              Creating spiritually rich experiences through devotion, sacred music, divine storytelling, and traditional gatherings.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-semibold text-deepBhagwa">Quick Links</h4>
+            <div class="mt-5 space-y-3 text-darkBrown/80">
+  <a href="index.html" class="block hover:text-bhagwa transition">Home</a>
+  <a href="index.html#services" class="block hover:text-bhagwa transition">Services</a>
+  <a href="index.html#contact" class="block hover:text-bhagwa transition">Contact</a>
+  <a href="terms.html" class="block hover:text-bhagwa transition">Terms & Conditions</a>
+  <a href="privacy.html" class="block hover:text-bhagwa transition">Privacy Policy</a>
+</div>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-semibold text-deepBhagwa">Connect With Us</h4>
+
+            <div class="mt-5 flex items-center gap-4 text-xl flex-wrap">
+              <a
+                href="https://www.youtube.com/@SannatanKriya/shorts"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-current">
+                  <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8ZM9.6 15.5v-7l6.1 3.5-6.1 3.5Z"/>
+                </svg>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/sanatankriya/posts/?feedView=all&viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-current">
+                  <path d="M4.98 3.5A2.49 2.49 0 1 0 5 8.48a2.49 2.49 0 0 0-.02-4.98ZM3 9h4v12H3zm7 0h3.83v1.71h.05c.53-1 1.84-2.06 3.79-2.06C21 8.65 21 11 21 14.05V21h-4v-6.03c0-1.44-.03-3.29-2-3.29-2 0-2.31 1.56-2.31 3.18V21H10z"/>
+                </svg>
+              </a>
+
+              <a
+                href="https://www.instagram.com/sanatankriya/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-current">
+                  <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5zm0 2h10c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3zm11.5 1.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+                </svg>
+              </a>
+
+              <a
+                href="https://www.facebook.com/profile.php?id=61582953758232"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                class="w-11 h-11 rounded-full bg-white border border-orange-200 flex items-center justify-center hover:bg-orange-500 hover:text-white transition"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-current">
+                  <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.87.24-1.46 1.5-1.46H16.7V4.02C16.4 3.98 15.5 3.9 14.46 3.9c-2.17 0-3.66 1.32-3.66 3.75V10H8v3h2.8v8z"/>
+                </svg>
+              </a>
+            </div>
+
+            <p class="mt-6 text-darkBrown/80">
+              WhatsApp:
+              <a href="https://wa.me/919999883648" target="_blank" class="text-bhagwa font-semibold hover:underline">
+                +91 99998 83648
+              </a>
+            </p>
+
+            <p class="mt-6 text-darkBrown/80">
+              WhatsApp:
+              <a href="https://wa.me/919911826993" target="_blank" class="text-bhagwa font-semibold hover:underline">
+                +91 99118 26993
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 pt-6 border-t border-orange-200 text-center text-sm text-darkBrown/65">
+          © 2026 Sanatan Kriya. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+<!-- WHATSAPP FLOAT -->
+<a
+  href="https://wa.me/919911826993"
+  target="_blank"
+  class="fixed top-1/2 right-2 -translate-y-1/2 z-50"
+>
+  <div class="w-16 h-16 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_0_22px_rgba(37,211,102,0.45)]">
+    <svg viewBox="0 0 32 32" class="w-7 h-7 fill-white">
+      <path d="M16.01 3.2c-7.05 0-12.76 5.7-12.76 12.74 0 2.25.59 4.46 1.72 6.42L3 29l6.75-1.77a12.73 12.73 0 0 0 6.26 1.6h.01c7.05 0 12.76-5.7 12.76-12.74S23.07 3.2 16.01 3.2zm0 23.2h-.01a10.46 10.46 0 0 1-5.34-1.47l-.38-.22-4 1.05 1.07-3.9-.25-.4a10.44 10.44 0 0 1-1.6-5.57c0-5.8 4.72-10.52 10.53-10.52 2.81 0 5.44 1.1 7.42 3.08a10.45 10.45 0 0 1 3.08 7.43c0 5.8-4.73 10.52-10.53 10.52zm5.77-7.87c-.31-.15-1.83-.9-2.12-1-.29-.11-.5-.15-.71.15-.21.3-.81 1-.99 1.2-.18.21-.36.23-.67.08-.31-.15-1.3-.48-2.48-1.53-.91-.81-1.52-1.8-1.7-2.11-.18-.31-.02-.47.14-.62.14-.14.31-.36.47-.54.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.54-.08-.15-.71-1.7-.97-2.33-.25-.61-.5-.53-.69-.54h-.6c-.21 0-.54.08-.82.39-.28.31-1.08 1.06-1.08 2.58s1.11 3 1.27 3.21c.16.21 2.19 3.35 5.3 4.69.74.32 1.32.51 1.78.65.75.24 1.43.21 1.97.13.6-.09 1.83-.75 2.09-1.47.26-.72.26-1.34.18-1.47-.08-.13-.29-.21-.6-.36z"/>
+    </svg>
+  </div>
+</a>
+
+<!-- ARTIST MODAL -->
+<div id="artistModal" class="fixed inset-0 bg-black/70 z-[100] hidden opacity-0 transition duration-300">
+  <div class="flex items-center justify-center min-h-screen px-4">
+    
+    <div id="artistModalPanel" class="bg-white rounded-[2rem] max-w-4xl w-full overflow-hidden shadow-2xl transform transition duration-300 opacity-0 translate-y-8 scale-95">
+
+      <!-- CLOSE -->
+      <button data-close-modal class="absolute top-5 right-5 text-white text-2xl z-10">✕</button>
+
+      <div class="grid md:grid-cols-2">
+
+        <!-- IMAGE -->
+        <div class="h-[350px] md:h-full">
+          <img id="artistModalImage" src="" class="w-full h-full object-cover">
+        </div>
+
+        <!-- CONTENT -->
+        <div class="p-8 flex flex-col justify-between">
+          <div>
+            <p id="artistModalCategory" class="text-sm uppercase tracking-[0.25em] text-bhagwa font-semibold"></p>
+            <h2 id="artistModalName" class="mt-2 text-3xl font-bold text-deepBhagwa font-heading"></h2>
+
+            <p id="artistModalDescription" class="mt-4 text-darkBrown/80 leading-7"></p>
+
+            <div class="mt-5">
+              <p class="font-semibold text-deepBhagwa">Suitable For:</p>
+              <p id="artistModalSuitable" class="text-darkBrown/80 mt-1"></p>
+            </div>
+          </div>
+
+          <!-- BUTTON -->
+          <button
+            id="artistModalBookBtn"
+            class="mt-6 px-6 py-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium hover:scale-105 transition"
+          >
+            Book Now
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+</div> <!-- END MAIN WRAPPER -->
+
+<!-- JS FILE -->
+<script src="js/artist.js"></script>
+
+</body>
+</html>
