@@ -78,20 +78,122 @@ if (mainMandala) {
 //   keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"],
 //   src: "assets/gallery/shiv-1.jpg"
 // }
-
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 const galleryImages = [
-  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv-1.jpg" },
-  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv-2.jpg" },
-  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv-3.jpg" },
-  { godName: "ganesh", keywords: ["ganesh", "ganesha", "ganpati", "vinayak"], src: "assets/gallery/ganesh-1.jpg" },
-  { godName: "ganesh", keywords: ["ganesh", "ganesha", "ganpati", "vinayak"], src: "assets/gallery/ganesh-2.jpg" },
-  { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna-1.jpg" },
-  { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna-2.jpg" },
-  { godName: "ram", keywords: ["ram", "shri ram", "raghav", "ram ji"], src: "assets/gallery/ram-1.jpg" },
-  { godName: "hanuman", keywords: ["hanuman", "bajrangbali", "pavanputra", "maruti"], src: "assets/gallery/hanuman-1.jpg" },
-  { godName: "durga", keywords: ["durga", "maa durga", "ambe", "jagdambe"], src: "assets/gallery/durga-1.jpg" },
-  { godName: "laxmi", keywords: ["laxmi", "lakshmi", "maa laxmi", "maa lakshmi"], src: "assets/gallery/laxmi-1.jpg" },
-  { godName: "saraswati", keywords: ["saraswati", "maa saraswati", "veena", "vidya"], src: "assets/gallery/saraswati-1.jpg" }
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (0).jpg" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (1).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (2).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (3).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (4).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (5).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (6).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (7).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (8).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (9).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (10).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (11).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (12).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (13).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (14).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (15).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (16).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (17).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (18).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (19).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (20).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (21).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (22).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (23).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (24).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (25).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (26).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (27).png" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (28).jpg" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (29).jpg" },
+  { godName: "shiv", keywords: ["shiv", "mahadev", "mahakal", "bholenath", "shankar"], src: "assets/gallery/shiv/shiv (30).jpg" },
+
+   { godName: "durga", keywords: ["durga", "maa durga", "ambe", "jagdambe"], src: "assets/gallery/durga/durga (1).png" },
+   { godName: "durga", keywords: ["durga", "maa durga", "ambe", "jagdambe"], src: "assets/gallery/durga/durga (2).png" },  
+   { godName: "durga", keywords: ["durga", "maa durga", "ambe", "jagdambe"], src: "assets/gallery/durga/durga (3).png" },
+   { godName: "durga", keywords: ["durga", "maa durga", "ambe", "jagdambe"], src: "assets/gallery/durga/durga (4).png" },  
+   { godName: "durga", keywords: ["durga", "maa durga", "ambe", "jagdambe"], src: "assets/gallery/durga/durga (5).png" },
+   { godName: "durga", keywords: ["durga", "maa durga", "ambe", "jagdambe"], src: "assets/gallery/durga/durga (6).png" },  
+   { godName: "durga", keywords: ["durga", "maa durga", "ambe", "jagdambe"], src: "assets/gallery/durga/durga (7).png" }, 
+
+   { godName: "hanuman", keywords: ["hanuman", "bajrangbali", "pavanputra", "maruti"], src: "assets/gallery/hanuman/hanuman (0).jpg" },
+   { godName: "hanuman", keywords: ["hanuman", "bajrangbali", "pavanputra", "maruti"], src: "assets/gallery/hanuman/hanuman (1).png" },
+   { godName: "hanuman", keywords: ["hanuman", "bajrangbali", "pavanputra", "maruti"], src: "assets/gallery/hanuman/hanuman (2).png" },
+   { godName: "hanuman", keywords: ["hanuman", "bajrangbali", "pavanputra", "maruti"], src: "assets/gallery/hanuman/hanuman (3).png" },
+
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (0).jpg" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (1).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (2).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (3).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (4).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (5).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (6).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (7).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (8).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (9).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (10).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (11).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (12).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (13).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (14).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (15).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (16).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (17).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (18).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (19).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (20).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (21).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (22).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (23).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (24).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (25).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (26).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (27).png" },
+   { godName: "krishna", keywords: ["krishna", "radha krishna", "kanha", "gopal", "murlidhar"], src: "assets/gallery/krishna/krishna (28).png" },
+   
+   { godName: "durga", keywords: ["durga", "maa durga", "ambe", "jagdambe", "mata rani"], src: "assets/gallery/durga/durga (1).png" },
+   { godName: "durga", keywords: ["durga", "maa durga", "ambe", "jagdambe", "mata rani"], src: "assets/gallery/durga/durga (2).png" },
+   { godName: "durga", keywords: ["durga", "maa durga", "ambe", "jagdambe", "mata rani"], src: "assets/gallery/durga/durga (3).png" },
+   { godName: "durga", keywords: ["durga", "maa durga", "ambe", "jagdambe", "mata rani"], src: "assets/gallery/durga/durga (4).png" },
+   { godName: "durga", keywords: ["durga", "maa durga", "ambe", "jagdambe", "mata rani"], src: "assets/gallery/durga/durga (5).png" },
+   { godName: "durga", keywords: ["durga", "maa durga", "ambe", "jagdambe", "mata rani"], src: "assets/gallery/durga/durga (6).png" },
+   { godName: "durga", keywords: ["durga", "maa durga", "ambe", "jagdambe", "mata rani"], src: "assets/gallery/durga/durga (7).png" },
+
+   { godName: "lakshmi", keywords: ["laxmi", "lakshmi", "maa laxmi", "maa lakshmi"], src: "assets/gallery/lakshmi/lakshmi (1).png" },
+   { godName: "lakshmi", keywords: ["laxmi", "lakshmi", "maa laxmi", "maa lakshmi"], src: "assets/gallery/lakshmi/lakshmi (2).png" },
+   { godName: "lakshmi", keywords: ["laxmi", "lakshmi", "maa laxmi", "maa lakshmi"], src: "assets/gallery/lakshmi/lakshmi (3).png" },
+
+   { godName: "ram", keywords: ["ram", "shri ram", "raghav", "ram ji"], src: "assets/gallery/ram/ram (1).png" },
+   { godName: "ram", keywords: ["ram", "shri ram", "raghav", "ram ji"], src: "assets/gallery/ram/ram (2).png" },
+   { godName: "ram", keywords: ["ram", "shri ram", "raghav", "ram ji"], src: "assets/gallery/ram/ram (3).png" },
+   { godName: "ram", keywords: ["ram", "shri ram", "raghav", "ram ji"], src: "assets/gallery/ram/ram (4).png" },
+   { godName: "ram", keywords: ["ram", "shri ram", "raghav", "ram ji"], src: "assets/gallery/ram/ram (5).png" },
+   { godName: "ram", keywords: ["ram", "shri ram", "raghav", "ram ji"], src: "assets/gallery/ram/ram (6).png" },
+   { godName: "ram", keywords: ["ram", "shri ram", "raghav", "ram ji"], src: "assets/gallery/ram/ram (7).png" },
+   { godName: "ram", keywords: ["ram", "shri ram", "raghav", "ram ji"], src: "assets/gallery/ram/ram (8).png" },
+   { godName: "ram", keywords: ["ram", "shri ram", "raghav", "ram ji"], src: "assets/gallery/ram/ram (9).png" },
+
+
+   { godName: "ganesh", keywords: ["ganesh", "ganesha", "ganpati", "vinayak"], src: "assets/gallery/ganesh/ganesh (1).png" },
+   { godName: "ganesh", keywords: ["ganesh", "ganesha", "ganpati", "vinayak"], src: "assets/gallery/ganesh/ganesh (2).png" },
+   { godName: "ganesh", keywords: ["ganesh", "ganesha", "ganpati", "vinayak"], src: "assets/gallery/ganesh/ganesh (3).png" },
+   { godName: "ganesh", keywords: ["ganesh", "ganesha", "ganpati", "vinayak"], src: "assets/gallery/ganesh/ganesh (4).png" },
+   { godName: "ganesh", keywords: ["ganesh", "ganesha", "ganpati", "vinayak"], src: "assets/gallery/ganesh/ganesh (5).png" },
+   { godName: "ganesh", keywords: ["ganesh", "ganesha", "ganpati", "vinayak"], src: "assets/gallery/ganesh/ganesh (6).png" },
+   { godName: "ganesh", keywords: ["ganesh", "ganesha", "ganpati", "vinayak"], src: "assets/gallery/ganesh/ganesh (7).png" },
+   { godName: "ganesh", keywords: ["ganesh", "ganesha", "ganpati", "vinayak"], src: "assets/gallery/ganesh/ganesh (8).png" },
+   { godName: "ganesh", keywords: ["ganesh", "ganesha", "ganpati", "vinayak"], src: "assets/gallery/ganesh/ganesh (9).png" },
+   { godName: "ganesh", keywords: ["ganesh", "ganesha", "ganpati", "vinayak"], src: "assets/gallery/ganesh/ganesh (10).png" },
 ];
 
 // ======================================================
@@ -105,7 +207,7 @@ const paginationWrapper = document.getElementById("paginationWrapper");
 
 const IMAGES_PER_PAGE = 25;
 let currentPage = 1;
-let filteredImages = [...galleryImages];
+let filteredImages = shuffleArray([...galleryImages]);
 
 // ======================================================
 // HELPERS
@@ -231,20 +333,22 @@ function filterGallery() {
   const searchValue = normalizeText(gallerySearch ? gallerySearch.value : "");
   const categoryValue = normalizeText(galleryCategory ? galleryCategory.value : "all");
 
-  filteredImages = galleryImages.filter((image) => {
-    const godName = normalizeText(image.godName);
-    const keywords = (image.keywords || []).map(normalizeText);
+  filteredImages = shuffleArray(
+    galleryImages.filter((image) => {
+      const godName = normalizeText(image.godName);
+      const keywords = (image.keywords || []).map(normalizeText);
 
-    const matchesSearch =
-      searchValue === "" ||
-      godName.includes(searchValue) ||
-      keywords.some((keyword) => keyword.includes(searchValue));
+      const matchesSearch =
+        searchValue === "" ||
+        godName.includes(searchValue) ||
+        keywords.some((keyword) => keyword.includes(searchValue));
 
-    const matchesCategory =
-      categoryValue === "all" || godName === categoryValue;
+      const matchesCategory =
+        categoryValue === "all" || godName === categoryValue;
 
-    return matchesSearch && matchesCategory;
-  });
+      return matchesSearch && matchesCategory;
+    })
+  );
 
   currentPage = 1;
   renderGallery();
